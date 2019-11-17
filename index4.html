@@ -1,0 +1,55 @@
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+    {{title}}
+</div>
+
+<script type="text/javascript">
+    new Vue({
+        'el':'#app',
+        'data':{
+            'title': 'Hello World!'
+        }
+    })
+
+</script>
+
+-->
+
+
+
+<!--****************************ممكن أعمل أكثر من تطبيق في الصفحة*****************************-->
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+    {{title}}
+</div>
+
+<div id="app2">
+    {{name}}
+</div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'title': 'Hello World!'
+        }
+    })
+
+
+        new Vue({
+        'el':'#app2',
+        'data':{
+            'name': 'Mohammed Azaam'
+        }
+    })
+
+
+
+</script>
