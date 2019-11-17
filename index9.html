@@ -1,0 +1,150 @@
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <button v-on:click="ShowMsg('clicked!', $event)">Show</button> 
+
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'methods':{
+            'ShowMsg': function(msg, event){
+                console.log(event),   
+                alert(msg);
+            }
+        }
+    
+    });
+
+</script> -->
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <button v-on:click="ShowMsg('clicked!', $event)">Show</button> 
+
+        <div>
+            x:{{x}}     <br>
+            y:{{y}}     <br>
+            type:{{type}}<br>
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'x':0,
+            'y':0,
+            'type': '' /*string عبارة عن */
+        },
+        
+        'methods':{
+            'ShowMsg':function(msg,event){
+                this.x = event.clientX;
+                this.y = event.clientY;
+                this.type= event.type;
+                alert(msg)
+            }
+        }
+    
+    });
+
+</script>
+-->
+
+<!--parameter طرق اخرى لإرسال-->
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <button v-on:click="ShowMsg('clicked!', $event)">Show</button>
+        <button v-on:click="showHello( $event)">showHello</button>   
+
+        <div>
+            x:{{x}}     <br>
+            y:{{y}}     <br>
+            type:{{type}}<br>
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'x':0,
+            'y':0,
+            'type': '' /*string عبارة عن */
+        },
+        'methods':{
+            'ShowMsg': function(msg, event){
+                this.x = event.clientX;   
+                this.y = event.clientY;
+                this.type = event.type;
+                alert(msg)
+
+            },
+
+            'showHello':function(event){
+                console.log(event);
+            }
+        }
+    
+    });
+
+</script>
+-->
+
+<!-- parameter طريقة أخرى كذلك وفي هذه لا نذكر إسم أي-->
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <button v-on:click="ShowMsg('clicked!', $event)">Show</button>
+        <button v-on:click="showHello">showHello</button>   
+
+        <div>
+            x:{{x}}     <br>
+            y:{{y}}     <br>
+            type:{{type}}<br>
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'x':0,
+            'y':0,
+            'type': '' /*string عبارة عن */
+        },
+        'methods':{
+            'ShowMsg': function(msg, event){
+                this.x = event.clientX;   
+                this.y = event.clientY;
+                this.type = event.type;
+                alert(msg)
+
+            },
+
+            'showHello':function(event){
+                console.log(event);
+            }
+        }
+    
+    });
+
+</script>
+-->
