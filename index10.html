@@ -1,0 +1,80 @@
+
+
+
+<!-- test________  url لو دعست راح ألاقي انو بعت فوق ال -->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <form>
+            <input type="text" name="test">
+            <button type="submit">Go</button>
+        </form>
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        
+
+    });
+
+</script> -->
+
+
+
+<!--saveData سنستدعي دالة  form ل  submit في حال تمَّ عمل -->
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">  
+        <form v-on:submit="saveData">   
+    
+            <input type="text" name="test"> 
+            <button type="submit">Go</button>
+        </form>
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'methods':{
+            'saveData':function(event){
+                event.preventDefault(); /*للصفحة reloade هيك بمنع عمل */
+            }
+        }
+        
+
+    });
+
+</script> -->
+
+
+
+
+<!--modifire هيك نفس النتيجة السابقة ولكن الكود أقل وانا قمت باستخدام ال -->
+
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <form v-on:submit.prevent="saveData"> 
+    
+            <input type="text" name="test"> 
+            <button type="submit">Go</button>
+        </form>
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'methods':{
+            'saveData':function(event){
+            }
+        }
+        
+
+    });
+
+</script>
