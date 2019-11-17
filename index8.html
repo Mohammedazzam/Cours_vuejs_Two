@@ -1,0 +1,79 @@
+
+<!--لما بدعس على الزر راح يظهر لي الأليرت وفيه رسالة-->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <button v-on:click="ShowMsg">Show</button>
+
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'methods':{
+            'ShowMsg':function(){
+                alert('clicked!')
+            }
+        }
+        
+    });
+
+</script> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <button v-on:click="ShowMsg('clicked!')">Show</button> 
+
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'methods':{
+            'ShowMsg': function(msg){   /*parameter عبارة عن  msg ال*/
+                alert(msg);
+            }
+        }
+    
+    });
+
+</script> -->
+
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <button v-on:click="ShowMsg()">Show</button> 
+
+        <button v-on:click="counter++">Add</button> 
+
+        <div>{{counter}}</div>
+
+    </div>
+
+<script type="text/javascript">
+    new Vue({
+        'el':'#app',
+        data:{
+            'counter':0
+        },
+        'methods':{
+            'ShowMsg': function(msg){   
+                alert(msg);
+            }
+        }
+    
+    });
+
+</script>
