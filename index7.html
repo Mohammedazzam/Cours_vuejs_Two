@@ -1,0 +1,223 @@
+
+<!--هذا الشكل يستخدم لطباعة النصوص فقط-->
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        {{msg}}
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'msg': 'Hello World'
+        }
+        
+    });
+
+</script>
+-->
+
+
+
+<!--على أنه نص htmlسيطبع كود html في حال أن الرسالة تحتوي على -->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        {{msg}}
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'msg': '<h1>Hello World</h1>'
+        }
+        
+    });
+
+</script> -->
+
+
+
+
+<!--html لطباعة ال-->
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <div v-html="msg"></div>
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'msg': '<h1>Hello World</h1>'
+        }
+        
+    });
+
+</script>
+-->
+
+
+
+<!--  لطباعة خصائص معينة ضمن الكود الخاص بنا-->
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <div v-html="msg"></div>
+        <h1 v-bind:id="dynamicId">TestMohammed</h1>
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'msg': '<h1>Hello World</h1>',
+            'dynamicId': 'Test_Id'
+
+        }
+        
+    });
+</script>
+-->
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <h1 v-bind:id=" 'test' + dynamicId">TestMohammed</h1>
+
+        <div v-html="msg"></div>
+
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'msg': '<h1>Hello World</h1>',
+            'dynamicId': 'Test_Id'
+
+        }
+        
+    });
+
+</script>
+-->
+
+
+<!--سيطبع رقم 9-->
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <h1 v-bind:id=" 'test' + dynamicId">TestMohammed</h1>
+
+        <div v-html="msg"></div>
+        
+        <div>{{5+4}}</div>
+
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'msg': '<h1>Hello World</h1>',
+            'dynamicId': 'Test_Id'
+
+        }
+        
+    });
+
+</script>
+-->
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <h1 v-bind:id=" 'test' + dynamicId">TestMohammed</h1>
+
+        <div v-html="msg"></div>
+        
+        <div>{{x+y}}</div>
+
+        <div>{{x-y}}</div>
+
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'msg': '<h1>Hello World</h1>',
+            'dynamicId': 'Test_Id',
+            'x':5,
+            'y':4
+
+        }
+        
+    });
+
+</script>
+
+-->
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <h1 v-bind:id=" 'test' + dynamicId">TestMohammed</h1>
+
+        <div v-html="msg"></div>
+        
+        <div>{{x+y}}</div>
+
+        <div>{{x-y}}</div>
+
+        <div>{{multi()}}</div>
+
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'msg': '<h1>Hello World</h1>',
+            'dynamicId': 'Test_Id',
+            'x':5,
+            'y':4
+
+        },
+
+        'methods':{
+            'multi':function(){
+                return this.x * this.y;
+            }
+        }
+        
+    });
+
+</script>
