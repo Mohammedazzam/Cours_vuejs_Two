@@ -1,0 +1,92 @@
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+     <h1>{{title}}</h1>
+     <h2>{{name}}</h2>  
+</div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'title': 'Hello World!',
+            'name': 'Mohammed Azzam'
+        }
+    })
+
+
+
+</script>
+-->
+
+
+
+
+
+
+<!--ضمن التطبيق الخاص بنا   Templet لاستخدام ال -->
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+    
+</div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'title': 'Hello World!',
+            'name': 'Mohammed Azzam'
+        },
+        'template': '<div>{{title}}</div>'
+    })
+
+</script>
+-->
+
+
+
+
+<!--********************************سيطبع رسالة خطأ**************************************-->
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+        <div id="app"></div>
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'title': 'Hello World!',
+            'name': 'Mohammed Azzam'
+        },
+        'template': '<div>{{title}}</div><div>name</div>'
+    })
+
+</script>
+-->
+
+
+<!--*****************************رئيسي  div حتى يذهب الخطأ لازم أضعهم في **************************************-->
+
+
+<script type="text/javascript" src="vue.js"> </script>
+    <div id="app"></div>
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            'title': 'Hello World!',
+            'name': 'Mohammed Azzam'
+        },
+        'template': '<div><div>{{title}}</div>  <div>{{name}}</div> </div>'
+    })
+
+</script>
