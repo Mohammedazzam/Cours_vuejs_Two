@@ -1,0 +1,244 @@
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <div class="rect" v-bind:class="'red'"></div>
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+     
+    
+    });
+
+</script>
+
+
+<style type="text/css">
+    .rect{
+        width: 100px;
+        height: 100px
+    }
+
+    .blue{
+        background: blue
+    }
+
+    .red{
+        background: red
+    }
+</style> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <div class="rect" v-bind:class="'red'"></div>
+        <div class="rect" :class='{blue:true}'></div>
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+     
+    
+    });
+
+</script>
+
+
+<style type="text/css">
+    .rect{
+        width: 100px;
+        height: 100px
+    }
+
+    .blue{
+        background: blue
+    }
+
+    .red{
+        background: red
+    }
+</style> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <div class="rect" v-bind:class="'red'"></div>
+        <div class="rect" :class="{blue:true, red:true}"></div>  /* هنا ضفت أكثر من كلاس*/
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+     
+    
+    });
+
+</script>
+
+
+<style type="text/css">
+    .rect{
+        width: 100px;
+        height: 100px
+    }
+
+    .blue{
+        background: blue
+    }
+
+    .red{
+        background: red
+    }
+</style> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <div class="rect" v-bind:class="'red'"></div>
+        <div class="rect" :class="{blue:activ, red:!activ}"></div> /*سيسند اللون الأحمر activ سيسند اللون الأزرق وإذا كان غير  true قيمته  activ إذا كان ال*/ 
+        <button @click="activ=!activ">Toggel</button> /*عند الضغط اعكسلي قيمة الأكتف*/
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            activ:true
+        }
+    
+    });
+
+</script>
+
+
+<style type="text/css">
+    .rect{
+        width: 100px;
+        height: 100px
+    }
+
+    .blue{
+        background: blue
+    }
+
+    .red{
+        background: red
+    }
+</style> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <div class="rect" v-bind:class="'red'"></div>
+        <div class="rect" :class="objClass"></div>  
+        <button @click="activ=!activ">Toggel</button> 
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({                                           /*سيطبع لي نفس النتيجة السابقة*/
+        'el':'#app',
+        'data':{
+            activ:true
+        },
+
+        'computed':{
+            objClass: function(){
+                return{blue:this.activ, red:!this.activ}
+            }
+        }
+    
+    });
+
+</script>
+
+
+<style type="text/css">
+    .rect{
+        width: 100px;
+        height: 100px
+    }
+
+    .blue{
+        background: blue
+    }
+
+    .red{
+        background: red
+    }
+</style> -->
+
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <div class="rect" v-bind:class="'red'"></div>
+        <div class="rect" :class="objClass"></div>  
+        <button @click="activ=!activ">Toggel</button> 
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({                                           /*سيطبع لي نفس النتيجة السابقة*/
+        'el':'#app',
+        'data':{
+            activ:true
+        },
+
+        'computed':{
+            objClass: function(){
+                return{blue:this.activ, red:!this.activ,'has-border':true}
+            }
+        }
+    
+    });
+
+</script>
+
+
+<style type="text/css">
+
+    .has-border{
+        border:solid 3px #ccc;
+    }
+
+    .rect{
+        width: 100px;
+        height: 100px
+    }
+
+    .blue{
+        background: blue
+    }
+
+    .red{
+        background: red
+    }
+</style>
