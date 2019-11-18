@@ -1,0 +1,114 @@
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        
+       <div>{{counter}}</div>
+       <button @click="counter ++">Add 1</button>
+            
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data': {
+            counter: 0
+        },
+        
+       
+    });
+
+</script> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        
+        <div v-once>{{counter}}</div>
+
+        <div>{{counter}}</div>
+        <button @click="counter++">Add 1</button>
+            
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            counter:0
+        }
+       
+    });
+
+</script> -->
+
+
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        
+        <div v-once>inital Value: {{counter}}</div>
+
+        <div>New Value: {{counter}}</div>
+
+        <button @click="counter++">Add 1</button>
+            
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            counter:5  /*قمت بتثبيت رقم */
+        }
+       
+    });
+
+</script> -->
+
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        
+        <div v-once>
+            inital Value: {{counter}}
+            <div>{{testv}}</div>
+            
+        </div>
+
+        <div>New Value: {{counter}}</div>
+        <div>New testv: {{testv}}</div>
+
+        <button @click="counter++ ;testv++">Add 1</button>
+            
+    </div>
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            counter:5,
+            testv:10
+            
+        }
+       
+    });
+
+</script>
