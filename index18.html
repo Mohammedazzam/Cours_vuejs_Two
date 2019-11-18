@@ -1,0 +1,85 @@
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+            {{farst_name + '' + last_name}}
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+                farst_name:'Mohammed',
+                last_name:'Azzam'            
+        }
+       
+    });
+
+</script> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+            {{farst_name + '' + last_name}}  <br>
+
+            {{full_name}}
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+                farst_name:'Mohammed',
+                last_name:'Azzam'            
+        },
+
+        'computed':{
+            full_name:function(){
+                return this.farst_name + '' +this.last_name;
+            }
+        }
+       
+    });
+
+</script> -->
+
+
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+    <div id="app">
+
+        <input v-model="first_name">
+        <input v-model="test">
+            <br>
+            {{first_name + ' ' + last_name + ' ' + Date.now() }}  
+            <br>
+            {{full_name}}
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+                first_name:'Mohammed',
+                last_name:'Azzam',
+                test: 'tt'           
+        },
+        'computed':{
+            full_name:function(){
+                return this.first_name + ' ' +this.last_name + ' ' + Date.now();
+            }
+        }
+       
+    });
+</script>
