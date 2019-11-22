@@ -1,0 +1,219 @@
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <div :style="'color:blue'">test test</div>
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app'
+     
+    });
+
+</script> -->
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <div :style=" testStyle ">test text</div>
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            testStyle:'color:blue'
+        }
+    });
+
+</script>
+    -->
+
+
+
+    <!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <div :style="{color:'red'}">Test Text</div>
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+        }
+    });
+
+</script>   -->
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+
+        <div :style="{color:color}">Test Text</div>
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        'data':{
+            color:'red'
+        }
+    });
+
+</script> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+    <div :style="testObj">test text</div>
+
+</div>
+  
+<script type="text/javascript">
+
+new Vue({
+    'el':'#app',
+    'data':{
+        testStyle:'color:blue',
+        testObj:{color:'yellow'},
+        
+    }
+});
+
+</script>  -->
+
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+    <div :style=" [testObj, testObj2] ">test text</div>
+
+</div>
+  
+<script type="text/javascript">
+
+new Vue({
+    'el':'#app',
+    'data':{
+        testStyle:'color:blue',
+        testObj:{color:'yellow'},
+        testObj2:{'font-size':'20px', color:'red'},
+        
+    }
+});
+
+</script> 
+-->
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+    <div :style=" [testObj2, testObj1, {'font-size': size + 'px'}]">test text</div>
+
+</div>
+  
+<script type="text/javascript">
+
+new Vue({
+    'el':'#app',
+    'data':{
+        testStyle:'color:blue',
+        testObj:{color:'yellow'},
+        testObj2:{'font-size':'20px', color: 'red'},
+        color:'red',
+        size:30
+        
+    }
+});
+
+</script> 
+-->
+
+
+<!--لما بدعس على الزر بكبر-->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+    <div :style=" [testObj2, testObj1, {'font-size': size + 'px'}]">test text</div> 
+    <button @click="size++">Increase</button>
+
+</div>
+  
+<script type="text/javascript">
+
+new Vue({
+    'el':'#app',
+    'data':{
+        testStyle:'color:blue',
+        testObj:{color:'yellow'},
+        testObj2:{'font-size':'20px', color: 'red'},
+        color:'red',
+        size:30
+        
+    }
+});
+
+</script>  -->
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+    <div :style=" [testObj2, testObj1, {'font-size': size + 'px'}]">test text</div> 
+    <button @click="size++">Increase</button>
+    <button @click="size--">Decrease</button>
+
+
+</div>
+  
+<script type="text/javascript">
+
+new Vue({
+    'el':'#app',
+    'data':{
+        testStyle:'color:blue',
+        testObj:{color:'yellow'},
+        testObj2:{'font-size':'20px', color: 'red'},
+        color:'red',
+        size:30
+        
+    }
+});
+
+</script>
