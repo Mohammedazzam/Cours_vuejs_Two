@@ -1,0 +1,253 @@
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+        <div v-for="item in list">                                  
+            {{item}}
+        </div>     
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            list:[1,4,5,9] 
+        }
+    });
+
+</script>
+-->
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+        <div v-for="item in list">                                   
+            {{list}}
+        </div>     
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            list:[1,4,5,9] 
+        }
+    });
+
+</script>
+-->
+
+
+<!--لما بضغط على الزر راح يضيف 10-->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+        <div v-for="item in list"> {{item}}</div>                                
+            
+
+            <button @click="addNew">Add</button> 
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            list:[1,4,5,9] 
+        },
+
+        'methods':{
+            addNew:function(){
+                this.list.push(10);
+            }
+        }
+    });
+
+</script> -->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+        <div v-for="item in list"> {{item}}</div>                                
+            
+
+            <button @click="addNew">Add</button> 
+            <button @click="ChangeList" >Change</button>
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            list:[1,4,5,9] 
+        },
+
+        'methods':{
+            addNew:function(){
+                this.list.push(10);
+            },
+            ChangeList:function(){
+                this.list =[1,2,,6]
+            }
+        }
+    });
+
+</script> -->
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+        <div v-for="item in list"> {{item}}</div>                                
+            
+
+            <button @click="addNew">Add</button>
+            <button @click="ChangeList">Chnge</button> 
+            <button @click="Change2nd">Chnge 2nd</button> 
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            list:[1,4,5,9] 
+        },
+
+        'methods':{
+            addNew:function(){
+                this.list.push(10);
+            },
+            ChangeList:function(){
+                this.list = [1,2,6];
+            },
+
+            Change2nd:function(){
+                this.list[2] = 15; 
+            }
+        }
+    });
+
+</script> -->
+
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+        <div v-for="item in list"> {{item}}</div>                                
+            
+
+            <button @click="addNew">Add</button>
+            <button @click="ChangeList">Chnge</button> 
+            <button @click="Change2nd">Chnge 2nd</button> 
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            list:[1,4,5,9] 
+        },
+
+        'methods':{
+            addNew:function(){
+                this.list.push(10);
+            },
+            ChangeList:function(){
+                this.list = [1,2,6];
+            },
+
+            Change2nd:function(){
+                Vue.set(this.list,2,15) /*سيغير رقم  5  ل 15*/
+                
+            }
+        }
+    });
+
+</script> -->
+
+
+
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+        <div v-for="item in list"> {{item}}</div>                                
+            
+
+            <button @click="addNew">Add</button>
+            <button @click="ChangeList">Chnge</button> 
+            <button @click="Change2nd">Chnge 2nd</button> 
+
+            <hr>
+            <div v-for="(item,index) in user"> {{index}}:{{item}}</div>   
+            <button @click="addNewDataToUser">addNewDataToUser</button> 
+                             
+
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            list:[1,4,5,9],     //جديد objectقمت بإنشاء 
+            user:{
+                name:'bashir'
+            }
+        },
+
+
+        'methods':{
+            addNew:function(){
+                this.list.push(10);
+            },
+            ChangeList:function(){
+                this.list = [1,2,6];
+            },
+
+            Change2nd:function(){
+                Vue.set(this.list,2,15)
+                
+            },
+
+            addNewDataToUser:function(){
+               // this.user.age = 10;
+                Vue.set(this.user,'age',10)
+
+
+            }
+        }
+    });
+
+</script>
