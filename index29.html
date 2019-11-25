@@ -1,0 +1,163 @@
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+       
+        <div v-for="item in  list2" v-if="item.age > 10">
+            <span>Name:{{item.name}}</span>
+            <span>Age:{{item.age}}</span>
+        </div>
+
+        <div v-for="(item,index) in  list2" >        
+            <h3>#{{index +1}}</h3> 
+                <div>Name:<input v-model="item.name"></div>
+                <div>Age:<input v-model="item.age"></div>
+                <button @click="deleteItem(index)">Delete This</button>
+                <br>
+            </div>
+
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+
+        data:{
+
+            list2:[
+                {name:'ahmad', age:10},
+                {name:'mohammed', age:12},
+                {name:'ramy', age:13},
+
+            ]
+        },
+
+        'methods':{
+            addItem:function(){
+                this.list. push(this.newVal);
+                this.newVal='';
+            },
+            deleteItem:function(index){
+                this.list2.splice(index,1)
+            }
+        }
+   
+    });
+
+</script> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+       
+        <div v-for="item in  list2" >
+            <span>Name:{{item.name}}</span>
+            <span v-if="item.age > 10" >Age:{{item.age}}</span>
+        </div>
+
+        <div v-for="(item,index) in  list2" >        
+            <h3>#{{index +1}}</h3> 
+                <div>Name:<input v-model="item.name"></div>
+                <div>Age:<input v-model="item.age"></div>
+                <button @click="deleteItem(index)">Delete This</button>
+                <br>
+            </div>
+
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+
+        data:{
+
+            list2:[
+                {name:'ahmad', age:10},
+                {name:'mohammed', age:12},
+                {name:'ramy', age:13},
+
+            ]
+        },
+
+        'methods':{
+            addItem:function(){
+                this.list. push(this.newVal);
+                this.newVal='';
+            },
+            deleteItem:function(index){
+                this.list2.splice(index,1)
+            }
+        }
+   
+    });
+
+</script> -->
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+       
+        <div v-for="item in  list2" v-if="item.age > 10"  >
+            <span>Name:{{item.name}}</span>
+            <span >Age:{{item.age}}</span>
+        </div>
+<hr>
+        <div v-for="item in  list2" >
+                <span>Name:{{item.name}}</span>
+                <span v-if="item.age > 10" >Age:{{item.age}}</span>
+        </div>
+
+<hr>
+
+        <div v-for="(item,index) in  list2" v-if="index < 2" >
+                <span>Name:{{item.name}}</span>
+                <span>Age:{{item.age}}</span>
+        </div>
+
+<hr>
+        <div v-for="(item,index) in  list2" >        
+            <h3>#{{index +1}}</h3> 
+                <div>Name:<input v-model="item.name"></div>
+                <div>Age:<input v-model="item.age"></div>
+                <button @click="deleteItem(index)">Delete This</button>
+                <br>
+            </div>
+
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+
+        data:{
+
+            list2:[
+                {name:'ahmad', age:10},
+                {name:'mohammed', age:12},
+                {name:'ramy', age:13},
+
+            ]
+        },
+
+        'methods':{
+            addItem:function(){
+                this.list. push(this.newVal);
+                this.newVal='';
+            },
+            deleteItem:function(index){
+                this.list2.splice(index,1)
+            }
+        }
+   
+    });
+
+</script>
