@@ -1,0 +1,82 @@
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+        <Div v-for="user in users">
+        <Div v-for="(item, atter , index) in user">
+            #{{index}}    {{atter}}: {{item}}
+        </Div>
+        <hr>
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            users:[{
+                name:'mohammed',
+                age:10,
+                email:'mohammmed@mm.com'
+         },
+         {
+                name:'mohammed',
+                age:10,
+                email:'mohammmed@mm.com'
+         },
+         {
+                name:'mohammed',
+                age:10,
+                email:'mohammmed@mm.com'
+         }
+            ]   
+     
+        }
+    });
+
+</script> -->
+
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+        <Div v-for="(user, index) in users">
+                #{{index+1}} 
+        <Div v-for="(item, atter , index) in user">
+               {{atter}}: {{item}}
+        </Div>
+        <hr>
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            users:[{
+                name:'mohammed',
+                age:10,
+                email:'mohammmed@mm.com'
+         },
+         {
+                name:'mohammed',
+                age:10,
+                email:'mohammmed@mm.com'
+         },
+         {
+                name:'mohammed',
+                age:10,
+                email:'mohammmed@mm.com'
+         }
+            ]   
+     
+        }
+    });
+
+</script>
