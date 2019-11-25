@@ -1,0 +1,95 @@
+
+<!--سيطبع رقم 1 خمس مرات-->
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <template v-for="item in 5 ">1 </template>
+    </div> 
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+        }  
+    })
+
+</script>
+-->
+
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+
+    <div id="app">
+        <template v-for="item in rate ">1 </template>
+        <template v-for="item in 5- rate ">0 </template>
+
+    </div> 
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            rate:3
+        }  
+    })
+
+</script>
+-->
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+
+    <div id="app">
+        <span  class="fas fa-star" v-for="item in rate "> </span>
+        <span   class="far fa-star" v-for="item in 5- rate "> </span>
+
+    </div> 
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            rate:3
+        }  
+    })
+
+</script>
+-->
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+
+    <div id="app">
+        <span  class="fas fa-star" v-for="item in parseInt(rate) "> </span>
+        <span   class="far fa-star" v-for="item in 5- rate "> </span>
+
+        <input v-model='rate'>
+    </div> 
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            rate:3
+        }  
+    })
+
+</script>
