@@ -1,0 +1,237 @@
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <div v-if='false'>              /*false لن يتم العرض لأن الشرط غير محقق حاطط*/
+                  <div v-for="item in  list">{{item}}</div>
+                  <input v-model='newVal'/>
+                  <button @click="addItem">Add</button>
+        </div>
+
+        <div v-for="item in  list2">
+            <span>Name:{{item.name}}</span>
+            <span>Age:{{item.age}}</span>
+        </div>
+    <br>
+        <div v-for="item in  list2">
+                <div>Name:<input v-model="item.name"></div> 
+                <div>Age:<input v-model="item.age"></div>
+                
+                <br>
+            </div>
+
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+
+        data:{
+            newVal:'',
+            list:[1,2,3],
+
+            list2:[
+                {name:'ahmad', age:10},
+                {name:'mohammed', age:20},
+                {name:'ramy', age:30},
+
+            ]
+        },
+
+        'methods':{
+            addItem:function(){
+                this.list. push(this.newVal);
+                this.newVal='';
+            }
+        }
+   
+    });
+
+</script> -->
+
+
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <div v-if='false'>
+                  <div v-for="item in  list">{{item}}</div>
+                  <input v-model='newVal'/>
+                  <button @click="addItem">Add</button>
+        </div>
+
+        <div v-for="item in  list2">
+            <span>Name:{{item.name}}</span>
+            <span>Age:{{item.age}}</span>
+        </div>
+
+        <div v-for="(item,index) in  list2">        
+            <h3>#{{index}}</h3>           /* لترتيب العنصر وكذلك السطر السابق تابع index قمنا هنا باستخدام ال*/
+                <div>Name:<input v-model="item.name"></div>
+                <div>Age:<input v-model="item.age"></div>
+                
+                <br>
+            </div>
+
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+
+        data:{
+            newVal:'',
+            list:[1,2,3],
+
+            list2:[
+                {name:'ahmad', age:10},
+                {name:'mohammed', age:20},
+                {name:'ramy', age:30},
+
+            ]
+        },
+
+        'methods':{
+            addItem:function(){
+                this.list. push(this.newVal);
+                this.newVal='';
+            }
+        }
+   
+    });
+
+</script>
+-->
+
+
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <div v-if='false'>
+                  <div v-for="item in  list">{{item}}</div>
+                  <input v-model='newVal'/>
+                  <button @click="addItem">Add</button>
+        </div>
+
+        <div v-for="item in  list2">
+            <span>Name:{{item.name}}</span>
+            <span>Age:{{item.age}}</span>
+        </div>
+
+        <div v-for="(item,index) in  list2">        
+            <h3>#{{index +1}}</h3> 
+                <div>Name:<input v-model="item.name"></div>
+                <div>Age:<input v-model="item.age"></div>
+                
+                <br>
+            </div>
+
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+
+        data:{
+            newVal:'',
+            list:[1,2,3],
+
+            list2:[
+                {name:'ahmad', age:10},
+                {name:'mohammed', age:20},
+                {name:'ramy', age:30},
+
+            ]
+        },
+
+        'methods':{
+            addItem:function(){
+                this.list. push(this.newVal);
+                this.newVal='';
+            }
+        }
+   
+    });
+
+</script>
+
+-->
+
+
+
+<!--سنضيف زر لحذف العناصر ضمن اللوب-->
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <div v-if='false'>
+                  <div v-for="item in  list">{{item}}</div>
+                  <input v-model='newVal'/>
+                  <button @click="addItem">Add</button>
+        </div>
+
+        <div v-for="item in  list2">
+            <span>Name:{{item.name}}</span>
+            <span>Age:{{item.age}}</span>
+        </div>
+
+        <div v-for="(item,index) in  list2">        
+            <h3>#{{index +1}}</h3> 
+                <div>Name:<input v-model="item.name"></div>
+                <div>Age:<input v-model="item.age"></div>
+                <button @click="deleteItem(index)">Delete This</button>
+                <br>
+            </div>
+
+
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+
+        data:{
+            newVal:'',
+            list:[1,2,3],
+
+            list2:[
+                {name:'ahmad', age:10},
+                {name:'mohammed', age:20},
+                {name:'ramy', age:30},
+
+            ]
+        },
+
+        'methods':{
+            addItem:function(){
+                this.list. push(this.newVal);
+                this.newVal='';
+            },
+            deleteItem:function(index){
+                this.list2.splice(index,1)
+            }
+        }
+   
+    });
+
+</script> -->
+
+
+
