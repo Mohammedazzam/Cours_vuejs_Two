@@ -1,0 +1,249 @@
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+           <div v-for="user in users">     
+
+                <input v-model="user.name">
+           </div>                
+    </div>   
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+           users:[
+               {name:'basher',age:10},
+               {name:'Ahmad',age:12}
+
+           ]
+        },  
+    });
+
+</script>
+-->
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+           <div v-for="user in users">       
+
+                <input v-model="user.name">
+           </div>   
+           
+           <button @click= "reversUser">    Revers User  </button>
+    </div>   
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+           users:[
+               {name:'basher',age:10},
+               {name:'Ahmad',age:12}
+
+           ]
+        }, 
+
+        methods:{
+           reversUser:function(){
+               this.users.reverse();
+           } 
+        } 
+    });
+
+</script>
+-->
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+           <div v-for="user in users" class="user">       
+
+                <input v-model="user.name">
+           </div>  
+
+           <button @click= "AddClassToFirstInput">    Add Class To Input  </button>
+           <button @click= "reversUser">    Revers User  </button>
+
+    </div>   
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+           users:[
+               {name:'basher',age:10},
+               {name:'Ahmad',age:12}
+
+           ]
+        }, 
+
+        methods:{
+           reversUser:function(){
+               this.users.reverse();
+           },
+           AddClassToFirstInput:function(){
+               document.querySelector('.user').classList.add('error');
+           }
+        } 
+    });
+
+</script>
+
+<style>
+
+.error input{
+    border: solid 2px red
+}
+
+</style>
+-->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+           <div v-for="(user,index) in users" :key="user.name"  class="user">       
+
+                <input v-model="user.name">
+           </div>  
+
+           <button @click= "AddClassToFirstInput">    Add Class To Input  </button>
+           <button @click= "reversUser">    Revers User  </button>
+
+    </div>   
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+           users:[
+               {name:'basher',age:10},
+               {name:'Ahmad',age:12}
+
+           ]
+        }, 
+
+        methods:{
+           reversUser:function(){
+               this.users.reverse();
+           },
+           AddClassToFirstInput:function(){
+               document.querySelector('.user').classList.add('error');
+           }
+        } 
+    });
+
+</script>
+
+<style>
+
+.error input{
+    border: solid 2px red
+}
+
+</style> -->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+           <div v-for="(user,index) in users" :key="user.age"  class="user">       
+
+                <input v-model="user.name">
+           </div>  
+
+           <button @click= "AddClassToFirstInput">    Add Class To Input  </button>
+           <button @click= "reversUser">    Revers User  </button>
+
+    </div>   
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+           users:[
+               {name:'basher',age:10},
+               {name:'Ahmad',age:12}
+
+           ]
+        }, 
+
+        methods:{
+           reversUser:function(){
+               this.users.reverse();
+           },
+           AddClassToFirstInput:function(){
+               document.querySelector('.user').classList.add('error');
+           }
+        } 
+    });
+
+</script>
+
+<style>
+
+.error input{
+    border: solid 2px red
+}
+
+</style> -->
+
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+           <div v-for="(user,index) in users" :key="index"  class="user">       
+
+                <input v-model="user.name">
+           </div>  
+
+           <button @click= "AddClassToFirstInput">    Add Class To Input  </button>
+           <button @click= "reversUser">    Revers User  </button>
+
+    </div>   
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+           users:[
+               {name:'basher',age:10},
+               {name:'Ahmad',age:12}
+
+           ]
+        }, 
+
+        methods:{
+           reversUser:function(){
+               this.users.reverse();
+           },
+           AddClassToFirstInput:function(){
+               document.querySelector('.user').classList.add('error');
+           }
+        } 
+    });
+
+</script>
+
+<style>
+
+.error input{
+    border: solid 2px red
+}
+
+</style>
