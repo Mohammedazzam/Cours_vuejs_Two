@@ -1,0 +1,256 @@
+<!--1,2,3,4,5,6,7,8,9  سيطبع -->
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+        <ul>
+            <li v-for = "number in numbers">{{number}}</li>
+        </ul>
+
+           </div>                
+    </div>   
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+          numbers:[1,2,3,4,5,6,7,8,9]
+        }  
+    });
+
+</script>
+-->
+
+
+<!--سيطبع 2 4 6 8 10-->
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+        <ul>
+            <li v-for = "number in evenNumvbers()">{{number}}</li>
+        </ul>
+
+           </div>                
+    </div>   
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+          numbers:[1,2,3,4,5,6,7,8,9,10]
+        },
+        methods:{
+            evenNumvbers:function(){
+                return this.numbers.filter(function(number){
+                    return number%2 == 0;
+                });
+            }
+        }  
+    });
+
+</script>
+-->
+
+
+
+
+
+<!-- 
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+    
+        <ul>
+            <li v-for = "number in evenNum">{{number}}</li>
+        </ul>
+
+           </div>                
+    </div>   
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+          numbers:[1,2,3,4,5,6,7,8,9,10]
+        },
+
+        computed:{
+           evenNum: function(){
+            return this.numbers.filter(function(number){
+                    return number%2 == 0;
+                });
+            }
+        },
+
+        methods:{
+            evenNumvbers:function(numbers){
+                return numbers.filter(function(number){
+                    return number%2 == 0;
+                });
+            }
+        }  
+    });
+
+</script>
+ -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+    <div id="app"> 
+        <ul>
+            <li v-for = "number in evenNum">{{number}}</li>
+        </ul>
+
+        <ul>
+             <li v-for = "user in users">{{user.name}}, {{user.age}}</li>
+        </ul>
+
+           </div>                
+    </div>  
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+          numbers:[1,2,3,4,5,6,7,8,9,10],
+          users:[
+              {name:'bashir', age:10},
+              {name:'ahmad', age:16},
+              {name:'hosame', age:20},
+          ]
+        },
+
+        computed:{
+           evenNum: function(){
+            return this.numbers.filter(function(number){
+                    return number%2 == 0;
+                });
+            }
+        },
+
+        methods:{
+            evenNumvbers:function(numbers){
+                return numbers.filter(function(number){
+                    return number%2 == 0;
+                });
+            }
+        }  
+    });
+</script> -->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+    <div id="app"> 
+        <ul>
+            <li v-for = "number in evenNum">{{number}}</li>
+        </ul>
+
+        <ul>
+             <li v-for = "user in usersUnderAge()">{{user.name}}, {{user.age}}</li>
+        </ul>
+
+           </div>                
+    </div>  
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+          numbers:[1,2,3,4,5,6,7,8,9,10],
+          users:[
+              {name:'bashir', age:10},
+              {name:'ahmad', age:16},
+              {name:'hosame', age:20},
+          ]
+        },
+
+        computed:{
+           evenNum: function(){
+            return this.numbers.filter(function(number){
+                    return number%2 == 0;
+                });
+            }
+        },
+
+        methods:{
+            evenNumvbers:function(numbers){
+                return numbers.filter(function(number){
+                    return number%2 == 0;
+                });
+            },
+
+            usersUnderAge: function(){
+                return this.users.filter(function(user){
+                    return user.age < 12;
+            });
+        } 
+        } 
+    });
+</script> -->
+
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+    <div id="app"> 
+        <ul>
+            <li v-for = "number in evenNum">{{number}}</li>
+        </ul>
+
+            <input v-model='search'>
+        <ul>
+             <li v-for = "user in searchUsers()">{{user.name}}, {{user.age}}</li>
+        </ul>
+
+    </div>  
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+          search:'',  
+          numbers:[1,2,3,4,5,6,7,8,9,10],
+          users:[
+              {name:'bashir', age:10},
+              {name:'ahmad', age:16},
+              {name:'hosame', age:20},
+          ]
+        },
+
+        computed:{
+           evenNum: function(){
+            return this.numbers.filter(function(number){
+                    return number%2 == 0;
+                });
+            }
+        },
+
+        methods:{
+            evenNumvbers:function(numbers){
+                return numbers.filter(function(number){
+                    return number%2 == 0;
+                });
+            },
+
+            usersUnderAge: function(){
+                return this.users.filter(function(user){
+                    return user.age < 12 ;
+            });
+        },
+
+        searchUsers:function(){
+            var app= this;
+            return this.users.filter(function(user){
+                    return user.name.indexOf(app.search) !== -1;
+            }); 
+         }     
+        }    
+    });
+</script>
