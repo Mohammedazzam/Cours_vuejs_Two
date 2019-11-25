@@ -1,0 +1,52 @@
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+
+    <div id="app">
+        <span  class="fas fa-star" v-for="item in parseInt(rate) "> </span>
+        <span   class="far fa-star" v-for="item in 5- rate "> </span>
+
+        <input v-model='rate'>
+    </div> 
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            rate:3
+        }  
+    })
+
+</script>
+-->
+
+
+<!--في حال ضغطنا على النجوم سيقوم بالعد والطباعة-->
+
+<script type="text/javascript" src="vue.js"> </script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+    <div id="app">
+
+        <span @click="rate=item"  class="fas fa-star" v-for="item in parseInt(rate) "> </span>
+        <span  @click="rate=item + rate" class="far fa-star" v-for="item in 5- rate "> </span>
+
+        <input v-model='rate'>
+    </div> 
+
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            rate:3
+        }  
+    })
+
+</script>
