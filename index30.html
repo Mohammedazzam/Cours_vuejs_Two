@@ -1,0 +1,102 @@
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <div v-for="item in user">
+            {{item}}
+        </div>
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            user:{
+                name:'Mohammed',
+                age:10,
+                email:'moh@Azzam.com'
+            }
+        }
+    });
+
+</script> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <div v-for="(item , key) in user">
+            {{key}}: {{item}}
+        </div>
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            user:{
+                name:'Mohammed',
+                age:10,
+                email:'moh@Azzam.com'
+            }
+        }
+    });
+
+</script> -->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <div v-for="(item , key, index) in user">
+          #{{index}}  {{key}}: {{item}}
+        </div>
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            user:{
+                name:'Mohammed',
+                age:10,
+                email:'moh@Azzam.com'
+            }
+        }
+    });
+
+</script> -->
+
+
+
+<!--نفس النتيجة-->
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <div v-for="(item , attr, index) in user">
+          #{{index}}  {{attr}}: {{item}}
+        </div>
+    </div>
+      
+<script type="text/javascript">
+
+    new Vue({
+        'el':'#app',
+        data:{
+            user:{
+                name:'Mohammed',
+                age:10,
+                email:'moh@Azzam.com'
+            }
+        }
+    });
+
+</script>
