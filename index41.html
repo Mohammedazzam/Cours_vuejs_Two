@@ -1,0 +1,345 @@
+<!-----------------------------------إضافة فلاتر---------------------------------->
+
+<!-------------------------------footer قمت بنسخ ال------------------------------->
+
+
+
+<!-- <script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+        <header class="header">
+                <h1>todos</h1>
+                <input class="new-todo"
+                  autocomplete="off"
+                  v-model="newTodo"    
+                  @keyup.enter="addTodo" 
+                  placeholder="What needs to be done?">
+              </header>
+              
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo " v-for="todo in todos" :class="{completed:todo.completed}">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+          <button class="destroy" @click="deleteTodo(todo)"></button> 
+
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <span class="todo-count">
+      <strong>1</strong> item left
+    </span>
+    <ul class="filters">
+      <li><a href="#/all" class="selected">All</a></li>  
+      <li><a href="#/active" >Active</a></li>
+      <li><a href="#/Completed"></a>Completed</a></li>
+    </ul>
+    <button class="clear-completed">
+      Clear completed
+    </button>
+  </footer>
+
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+        newTodo: '' ,                                    
+      todos: [   
+        {title:'test 1', completed:true},       
+        {title:'test 2',completed:false},
+      ]
+    },
+
+    methods:{                           
+        deleteTodo: function(todo){
+            this.todos.splice(this.todos.indexOf(todo), 1);  
+        },
+
+        addTodo:function(){     
+
+            if(this.newTodo=='')    
+            return;  
+                  
+            this.todos.push({
+                'title':this.newTodo,
+                'completede': false,       
+            });
+            this.newTodo = '';      
+        }
+    }
+        
+    
+  });
+</script> -->
+
+
+
+
+<!--
+
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+        <header class="header">
+                <h1>todos</h1>
+                <input class="new-todo"
+                  autocomplete="off"
+                  v-model="newTodo"    
+                  @keyup.enter="addTodo" 
+                  placeholder="What needs to be done?">
+              </header>
+              
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo " v-for="todo in todos" :class="{completed:todo.completed}">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+          <button class="destroy" @click="deleteTodo(todo)"></button> 
+
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <span class="todo-count">
+      <strong>1</strong> item left
+    </span>
+    <ul class="filters">
+      <li><a href="#" @click="visabilaty= 'all' " class="selected">All</a></li>  
+      <li><a href="#/active" >Active</a></li>
+      <li><a href="#/Completed"></a>Completed</a></li>
+    </ul>
+    <button class="clear-completed">
+      Clear completed
+    </button>
+  </footer>
+
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+        newTodo: '' ,
+        visabilaty: '' ,        /*visabilaty قمت بإضافة متعير باسم*/                                                               
+      todos: [   
+        {title:'test 1', completed:true},       
+        {title:'test 2',completed:false},
+      ]
+    },
+
+    methods:{                           
+        deleteTodo: function(todo){
+            this.todos.splice(this.todos.indexOf(todo), 1);  
+        },
+
+        addTodo:function(){     
+
+            if(this.newTodo=='')    
+            return;  
+                  
+            this.todos.push({
+                'title':this.newTodo,
+                'completede': false,       
+            });
+            this.newTodo = '';      
+        }
+    }
+        
+    
+  });
+</script>
+-->
+
+
+
+
+<!--# هذه   navegate  حتى ألغي ال -->
+<!--
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+        <header class="header">
+                <h1>todos</h1>
+                <input class="new-todo"
+                  autocomplete="off"
+                  v-model="newTodo"    
+                  @keyup.enter="addTodo" 
+                  placeholder="What needs to be done?">
+              </header>
+              
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo " v-for="todo in todos" :class="{completed:todo.completed}">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+          <button class="destroy" @click="deleteTodo(todo)"></button> 
+
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <span class="todo-count">
+      <strong>1</strong> item left
+    </span>
+    <ul class="filters">
+      <li><a href="#" @click.prevent="visabilaty= 'all' " class="selected">All</a></li>  
+      <li><a href="#/active" >Active</a></li>
+      <li><a href="#/Completed"></a>Completed</a></li>
+    </ul>
+    <button class="clear-completed">
+      Clear completed
+    </button>
+  </footer>
+
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+        newTodo: '' ,
+        visabilaty: '' ,        /*visabilaty قمت بإضافة متعير باسم*/                                                               
+      todos: [   
+        {title:'test 1', completed:true},       
+        {title:'test 2',completed:false},
+      ]
+    },
+
+    methods:{                           
+        deleteTodo: function(todo){
+            this.todos.splice(this.todos.indexOf(todo), 1);  
+        },
+
+        addTodo:function(){     
+
+            if(this.newTodo=='')    
+            return;  
+                  
+            this.todos.push({
+                'title':this.newTodo,
+                'completede': false,       
+            });
+            this.newTodo = '';      
+        }
+    }
+        
+    
+  });
+</script>
+-->
+
+
+
+
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+  <header class="header">
+     <h1>todos</h1>
+     <input class="new-todo"
+       autocomplete="off"
+       v-model="newTodo"
+       @keyup.enter="addTodo"
+       placeholder="What needs to be done?">
+   </header>
+   <section class="main" >
+     <ul class="todo-list">
+       <li class="todo" v-for="todo in filterdTodos" :class="{completed:todo.completed}">
+         <div class="view">
+           <input class="toggle" type="checkbox" v-model="todo.completed">
+           <label>{{todo.title}}</label>
+           <button class="destroy" @click="deleteTodo(todo)"></button>
+         </div>
+       </li>
+     </ul>
+   </section>
+   <footer class="footer">
+     <span class="todo-count">
+       <strong>1</strong> item left
+     </span>
+     <ul class="filters">
+       <li><a href="#" @click.prevent="visibility='all' " 
+         :class="{selected:visibility=='all'}">All</a></li>
+       <li><a href="#" @click.prevent="visibility='active' "
+         :class="{selected:visibility=='active'}">Active</a></li>
+       <li><a href="#" @click.prevent="visibility='completed' "
+         :class="{selected:visibility=='completed'}">Completed</a></li>
+     </ul>
+     <button class="clear-completed">
+       Clear completed
+     </button>
+   </footer>
+ </section>
+ 
+ <script type="text/javascript">
+   var filters = {
+     'all': function(todos){ /*هذا عبارة عن دالة لأول فلتر*/
+       return todos;       /*كما هي بدون تغيير todos هنا سيعيد ال */
+     },
+     active: function(todos){ /*هذه عبارة عن ثاني فلتر لدينا*/
+       return todos.filter(function(todo){/*هذا عبارة عن فلتر موجود في الجافا سكربت  للتعامل مع المصفوفات حيثُ أنه سيصله الأيتم الواحد*/
+         return ! todo.completed;
+       });
+     },
+     completed: function(todos){    /*الفلتر الثالث*/
+       return todos.filter(function(todo){
+         return todo.completed;
+       });
+     }
+ 
+   }
+ 
+   new Vue({
+     'el': '.todoapp',
+     data: {
+       newTodo: '',
+       visibility: 'all',       /*visabilaty قمت بإضافة متعير باسم*/
+       todos: [
+         {title:'test 1', completed: true},
+         {title:'test 2', completed: false},
+       ]
+     },
+     computed:{
+       filterdTodos: function(){
+         return filters[ this.visibility ] (this.todos);
+       }
+     },
+     methods:{
+       deleteTodo: function(todo){
+         this.todos.splice(this.todos.indexOf(todo), 1);
+       },
+       addTodo: function(){
+         if(this.newTodo == '')
+           return ;
+         
+         this.todos.push({
+           'title': this.newTodo,
+           'completed': false,
+         });
+         this.newTodo = '';
+       }
+     }
+   });
+ </script>
