@@ -1,0 +1,242 @@
+<!-------------------------------------خاصية اضافة  مهمة---------------------------------->
+
+<!--قمت بنسخ الهيدر فقط-->
+
+<!-- <script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+        <header class="header">
+                <h1>todos</h1>
+                <input class="new-todo"
+                  autocomplete="off"
+                  placeholder="What needs to be done?">
+        </header>
+              
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo " v-for="todo in todos" :class="{completed:todo.completed}">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+          <button class="destroy" @click="deleteTodo(todo)"></button> 
+
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+      todos: [   
+        {title:'test 1', completed:true},       
+        {title:'test 2',completed:false},
+      ]
+    },
+
+    methods:{                           
+        deleteTodo: function(todo){
+            this.todos.splice(this.todos.indexOf(todo), 1);  
+        },
+    }
+        
+    
+  });
+</script> -->
+
+
+
+<!-- bind في السطر 12 قمت بعمل -->
+<!--addTodo فسيتم استدعاء هذه الدالة وهي enter سطر68 معناه أنه في حال تمَّ الضغط على  -->
+<!--
+
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+        <header class="header">
+                <h1>todos</h1>
+                <input class="new-todo"
+                  autocomplete="off"
+                  v-model="newTodo"     
+                  @keyup.enter="addTodo" 
+                  placeholder="What needs to be done?">
+        </header>
+              
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo " v-for="todo in todos" :class="{completed:todo.completed}">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+          <button class="destroy" @click="deleteTodo(todo)"></button> 
+
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+        newTodo: '' ,                                    /* قمت بتعريف متغير لإضافة العنوان الجديد وهي عبارة عن نص فارغ*/
+      todos: [   
+        {title:'test 1', completed:true},       
+        {title:'test 2',completed:false},
+      ]
+    },
+
+    methods:{                           /*deleteTodo لتعريف دالة methods قمت بكتابة هذه ال*/
+        deleteTodo: function(todo){
+            this.todos.splice(this.todos.indexOf(todo), 1);  /*سيتم حذف  المهمة*/
+        },
+
+        addTodo:function(){     /*addTodo بضيف دالة جديدة باسم */
+            this.todos.push({
+                'title':this.newTodo,
+                'completede': false,        /*لحالة الانهاء*/
+            })
+        }
+    }
+        
+    
+  });
+</script>
+-->
+
+
+<!---
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+        <header class="header">
+                <h1>todos</h1>
+                <input class="new-todo"
+                  autocomplete="off"
+                  v-model="newTodo"    
+                  @keyup.enter="addTodo" 
+                  placeholder="What needs to be done?">
+              </header>
+              
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo " v-for="todo in todos" :class="{completed:todo.completed}">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+          <button class="destroy" @click="deleteTodo(todo)"></button> 
+
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+        newTodo: '' ,                                    /* قمت بتعريف متغير لإضافة العنوان الجديد وهي عبارة عن نص فارغ*/
+      todos: [   
+        {title:'test 1', completed:true},       
+        {title:'test 2',completed:false},
+      ]
+    },
+
+    methods:{                           /*deleteTodo لتعريف دالة methods قمت بكتابة هذه ال*/
+        deleteTodo: function(todo){
+            this.todos.splice(this.todos.indexOf(todo), 1);  /*سيتم حذف  المهمة*/
+        },
+
+        addTodo:function(){     /*addTodo بضيف دالة جديدة باسم */
+            this.todos.push({
+                'title':this.newTodo,
+                'completede': false,        /*لحالة الانهاء*/
+            });
+            this.newTodo = '';      /*سيضيف نص فارغ*/
+        }
+    }
+        
+    
+  });
+</script>
+-->
+
+
+
+
+<!-- <script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+        <header class="header">
+                <h1>todos</h1>
+                <input class="new-todo"
+                  autocomplete="off"
+                  v-model="newTodo"    
+                  @keyup.enter="addTodo" 
+                  placeholder="What needs to be done?">
+              </header>
+              
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo " v-for="todo in todos" :class="{completed:todo.completed}">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+          <button class="destroy" @click="deleteTodo(todo)"></button> 
+
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+        newTodo: '' ,                                    /* قمت بتعريف متغير لإضافة العنوان الجديد وهي عبارة عن نص فارغ*/
+      todos: [   
+        {title:'test 1', completed:true},       
+        {title:'test 2',completed:false},
+      ]
+    },
+
+    methods:{                           /*deleteTodo لتعريف دالة methods قمت بكتابة هذه ال*/
+        deleteTodo: function(todo){
+            this.todos.splice(this.todos.indexOf(todo), 1);  /*سيتم حذف  المهمة*/
+        },
+
+        addTodo:function(){     /*addTodo بضيف دالة جديدة باسم */
+
+            if(this.newTodo=='')    /*لن يضيف enter إذا لم أكتب شيئ ودعست*/
+            return;  
+                  
+            this.todos.push({
+                'title':this.newTodo,
+                'completede': false,        /*لحالة الانهاء*/
+            });
+            this.newTodo = '';      /*سيضيف نص فارغ*/
+        }
+    }
+        
+    
+  });
+</script> -->
+
+
