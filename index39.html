@@ -1,0 +1,318 @@
+<!--css هذا رابط -->
+<!-- <script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/> 
+
+<section class="todoapp">
+  <header class="header">
+  
+  </header>
+  <section class="main" >
+ 
+    <ul class="todo-list">
+      <li class="todo">
+        <div class="view">
+          <input class="toggle" type="checkbox">
+          <label>title</label>
+        </div>
+      </li>
+    </ul>
+  </section>
+  
+</section> -->
+
+<!-- <script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo" v-for="todo in todos">
+        <div class="view">
+          <input class="toggle" type="checkbox" >
+          <label>title</label>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+      todos: [      /*array هذه عبارة عن */
+        'test 1',
+        'test 2'
+      ]
+    }
+    
+  });
+</script> -->
+
+
+<!-- <script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo" v-for="todo in todos">
+        <div class="view">
+          <input class="toggle" type="checkbox" >
+          <label>{{todo.title}}</label>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+      todos: [      /*array هذه عبارة عن */
+        {title:'test 1'},            /*true ووضعنا قيمة افتراضية عبارة عن */   /*object هذه عبارة عن */
+        {title:'test 2'},
+      ]
+    }
+    
+  });
+</script> -->
+
+
+
+
+<!-- <script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo" v-for="todo in todos">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed" >
+          <label>{{todo.title}}</label>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+      todos: [   /*object وتحتوي على 2 todos قمنا بإنشاء أراي باسم */
+        {title:'test 1',completed:true},       /*true ووضعنا قيمة افتراضية عبارة عن */   /*object هذه عبارة عن */
+        {title:'test 2',completed:false},
+      ]
+    }
+    
+  });
+</script> -->
+
+
+
+
+<!--li عند ال  completed طريقة عمل الخط بحط فقط  -->
+<!--
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo completed" v-for="todo in todos">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+      todos: [   /*object وتحتوي على 2 todos قمنا بإنشاء أراي باسم */
+        {title:'test 1', completed:true},       /*true ووضعنا قيمة افتراضية عبارة عن */   /*object هذه عبارة عن */
+        {title:'test 2',completed:false},
+      ]
+    }
+    
+  });
+</script>
+
+-->
+
+<!-- true طريقة عمل الخط عندما يكون -->
+
+<!-- <script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo " v-for="todo in todos" :class="{completed:todo.completed}">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+      todos: [   /*object وتحتوي على 2 todos قمنا بإنشاء أراي باسم */
+        {title:'test 1', completed:true},       /*true ووضعنا قيمة افتراضية عبارة عن */   /*object هذه عبارة عن */
+        {title:'test 2',completed:false},
+      ]
+    }
+    
+  });
+</script> -->
+
+
+
+
+
+<!--button لحذف مهمة قمت بإضافة -->
+<!--لتمرير المهمة (todo) وظيفة هذه -->
+
+<!-- <script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo " v-for="todo in todos" :class="{completed:todo.completed}">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+          <button class="destroy" @click="deleteTodo(todo)"></button>  
+
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+      todos: [   
+        {title:'test 1', completed:true},       
+        {title:'test 2',completed:false},
+      ]
+    },
+
+    methods:{                           /*deleteTodo لتعريف دالة methods قمت بكتابة هذه ال*/
+        deleteTodo: function(todo){
+            this.todos.splice(this.todos.indexOf(todo),1);  /* سيتم حذف  المهمة    */
+        }
+    }
+    
+  });
+</script> -->
+
+
+********************************************جرب هذه والي بعدها**********************************************
+
+<!--
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo " v-for="todo in todos" :class="{completed:todo.completed}">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+          <button class="destroy" @click="deleteTodo(todo)"></button>  
+
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+      todos: [   
+        {title:'test 1', completed:true},       
+        {title:'test 2',completed:false},
+      ]
+    },
+
+    methods:{                           
+        deleteTodo: function(todo){
+            this.todos.splice(this.todos.indexOf(todo),2);  /*سيحذف المهمتين*/
+        }
+    }
+    
+  });
+</script>
+-->
+
+<!-- <script type="text/javascript" src="https://unpkg.com/vue"></script>
+<link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet"/>
+
+<section class="todoapp">
+
+  <section class="main" >
+    <ul class="todo-list">
+      <li class="todo " v-for="todo in todos" :class="{completed:todo.completed}">
+        <div class="view">
+          <input class="toggle" type="checkbox" v-model="todo.completed">
+          <label>{{todo.title}}</label>
+          <button class="destroy" @click="deleteTodo(todo)"></button>  
+
+        </div>
+      </li>
+    </ul>
+  </section>
+
+</section>
+
+<script type="text/javascript">
+  new Vue({
+    'el': '.todoapp',
+    data: {
+      todos: [   
+        {title:'test 1', completed:true},       
+        {title:'test 2',completed:false},
+      ]
+    },
+
+    methods:{                           
+        deleteTodo: function(todo){
+            this.todos.splice(this.todos.indexOf(todo)); /*defult هذه عبارة عن ال*/  
+        }
+    }
+    
+  });
+</script> -->
