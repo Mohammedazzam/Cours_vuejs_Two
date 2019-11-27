@@ -1,0 +1,67 @@
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <table>
+        <my-row></my-row>
+    </table>
+</div>
+
+<script type="text/javascript">
+	Vue.component('my-row',{
+        template:"<div>test</div>"
+    })
+	new Vue({
+		'el':'#app',
+
+	});
+
+</script>
+-->
+
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <table>
+        <tr is="my-row"></tr>
+    </table>
+</div>
+
+<script type="text/javascript">
+	Vue.component('my-row',{
+        template: '<div>test</div>'
+    });
+	new Vue({
+		'el':'#app',
+
+	});
+
+</script>
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <table>
+            <tr is='my-row'></tr>
+    </table>
+</div>
+
+<script type="text/javascript">
+	Vue.component('my-row',{
+        template:"<div>test</div>"
+    })
+	new Vue({
+		'el':'#app',
+
+	});
+
+</script> -->
+
+
+
+
+
