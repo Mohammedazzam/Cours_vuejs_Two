@@ -1,0 +1,128 @@
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <product></product>
+
+</div>
+
+<script type="text/javascript">
+	Vue.component('product', {
+		template: '<div> product componunt </div>',
+        
+	});
+	
+	new Vue({
+		'el':'#app',
+		data:{
+			
+		},
+	});
+
+</script>
+-->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <product-list></product-list>
+
+</div>
+
+<script type="text/javascript">
+
+	
+new Vue({
+		'el':'#app',
+		data:{
+			
+		},
+	});
+
+	Vue.component('product-list', {
+		template: '<div> product componunt </div>',
+        
+	});
+
+
+</script>
+ -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <product-list></product-list>
+
+</div>
+
+<script type="text/javascript">
+	Vue.component('product-list', {
+		template: '<div> product componunt: {{name}} </div>',
+        data:function(){
+			return{
+				name:'p1'
+			}
+		}
+	});
+	
+	new Vue({
+		'el':'#app',
+		data:{
+			'name':'s'
+            
+		}
+	});
+
+</script> -->
+
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <product-list></product-list>
+    <tag></tag>
+
+</div>
+
+<script type="text/javascript">
+	Vue.component('product-list', {
+		template: '<div> product componunt: {{name}} </div>',
+        data:function(){
+            return{
+            name:'p1'
+            }
+        }
+	});
+	
+	new Vue({
+		'el':'#app',
+        'components':{
+            'tag':{
+                template: '<div> Tag: {{name}} </div>',
+                 data:function(){
+                  return{
+                     name:'tag'
+            }
+        }
+            }
+        },
+		data:{
+            
+		}
+	});
+
+</script>
+
+
+
+
+
