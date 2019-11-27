@@ -1,0 +1,106 @@
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+	<product></product>
+</div>
+
+<script type="text/javascript">
+	Vue.component('product',{
+		template:'<div>{{name}}</div>',
+		data:function(){
+			return{
+				name:'product 1'
+			}
+		}
+	});	
+	new Vue({
+		'el':'#app',
+		data:{
+			
+		},
+	});
+
+</script> -->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+	<product>product 1</product>
+</div>
+
+<script type="text/javascript">
+	Vue.component('product',{
+		template:'<div><slot></slot></div>',
+		data:function(){
+			return{
+				name:'product 1'
+			}
+		}
+	});	
+	new Vue({
+		'el':'#app',
+		data:{
+			
+		},
+	});
+
+</script> -->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+	<product>product 1</product>
+	<product>product 2</product>
+	<product>product 3</product>
+</div>
+
+<script type="text/javascript">
+	Vue.component('product',{
+		template:'<div><slot></slot></div>',
+		data:function(){
+			return{
+			}
+		}
+	});	
+	new Vue({
+		'el':'#app',
+		data:{
+			
+		},
+	});
+
+</script> -->
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+	<product>product 1</product>
+	<product>product 2</product>
+	<product>product 3</product>
+</div>
+
+<script type="text/javascript">
+	Vue.component('product',{
+		template:'<h1><slot></slot></h1>',
+
+	});	
+	new Vue({
+		'el':'#app',
+		data:{
+			
+		},
+	});
+
+</script>
