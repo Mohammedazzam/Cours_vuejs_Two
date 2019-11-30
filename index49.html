@@ -1,0 +1,172 @@
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <product name="product 1" price="150"></product>    
+</div>
+
+
+<script type="text/javascript">
+	Vue.component('product',{
+        'template':'<div><h1>{{name}}</h1>{{price}}</div>',
+		props:['name','price']
+    });
+	new Vue({
+		'el':'#app',
+
+	});
+
+</script> -->
+
+
+
+
+
+<!-- 
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <product name="product 1" price="150"></product>
+    <product name="product 2" price="250"></product>    
+    <product name="product 3" price="350"></product>    
+    
+</div>
+
+
+<script type="text/javascript">
+	Vue.component('product',{
+        'template':'<div> <h1>{{name}}</h1> {{price}} </div>',
+        props:['name','price']
+    });
+	new Vue({
+		'el':'#app',
+
+	});
+
+</script> -->
+
+
+
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <product name="product 1" price="150"  product-catogary='cat1'></product>
+    <product name="product 2" price="250"></product>    
+    <product name="product 3" price="350"></product>    
+    
+</div>
+
+
+<script type="text/javascript">
+	Vue.component('product',{
+        'template':'<div> <h1>{{name}}</h1> {{price}}  {{productCatogary}}</div>',
+        props:['name','price' , 'productCatogary']
+    });
+	new Vue({
+		'el':'#app',
+
+	});
+
+</script> -->
+
+
+
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <product name="product 1" :proce="price"  product-catogary='cat1'></product>
+    <product name="product 2" price="250"></product>    
+    <product name="product 3" price="350"></product>    
+    
+</div>
+
+
+<script type="text/javascript">
+	Vue.component('product',{
+        'template':'<div> <h1>{{name}}</h1> {{price}}  {{productCatogary}}</div>',
+        props:['name','price' , 'productCatogary']
+    });
+	new Vue({
+		'el':'#app',
+        'data':{
+            price:100
+        }
+	});
+
+</script> -->
+
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <product name="product 1" :price="price"  product-catogary='cat1'></product>
+    <product name="product 2" :price="250"></product>    
+    <product name="product 3" :price="350"></product>    
+    
+</div>
+
+
+<script type="text/javascript">
+	Vue.component('product',{
+        'template':'<div> <h1>{{name}}</h1> {{price}}  {{productCatogary}}</div>',
+        props:['name','price' , 'productCatogary']
+    });
+	new Vue({
+		'el':'#app',
+        'data':{
+            price:100
+        }
+	});
+
+</script>
+-->
+
+
+
+
+
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+
+<div id="app">
+	<product name="product 1" :price="price" product-category="cat 1"></product>
+	<product name="product 2" :price="250"></product>
+	<product name="product 3" :price="350"></product>
+
+	
+	<product v-for="product in products" :name="product.name" :price="product.price" 
+		:product-category="product.cat"></product>
+</div>
+
+<script type="text/javascript">
+	Vue.component('product',{
+		'template': '<div><h1>{{name}}</h1> {{price}}, {{productCategory}}</div>',
+		props:['name', 'price', 'productCategory']
+	});
+
+	new Vue({
+		'el':'#app',
+		'data': {
+			price: 100,
+			products: [    //وأنشأت في مصفوفة products سميته  object لإضافة منتوجات بعمل
+				{'name': 'P1', 'price': 100, 'cat': 'cat 1'},
+				{'name': 'P2', 'price': 150, 'cat': 'cat 2'},
+				{'name': 'P3', 'price': 170, 'cat': 'cat 3'},
+			]
+		}
+	});
+</script>
+
+
+    
