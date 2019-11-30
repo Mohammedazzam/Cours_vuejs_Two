@@ -1,0 +1,240 @@
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+        <product name="product 1" :price="100" product-category="cat 1"></product>
+        <product name="product 2" :price="250"></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>{{name}}</h1> {{price}} {{productCategory}}</div>',
+            props:{
+                'name':{}, 
+                'price':{},
+                'productCategory':{}
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+            }
+        });
+    </script> -->
+   
+
+
+ 
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <product name="product 1" :price="100" product-category="cat 1"></product>
+        <product name="product 2" :price="250"></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>{{name}}</h1> {{price}}, {{productCategory}}</div>',
+            props:{
+                'name':{}, 
+                'price':{},
+                'productCategory':{required:true}    //كخاصية مطلوبة productCategory وضعنا ال 
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+            }
+        });
+</script> -->
+
+
+
+<!--string قمت بالتحقق من أن القيمة المدخلة ليست رقم وهي عبارة عن -->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <product name="product 1" :price="100" product-category="cat 1"></product>
+        <product name="product 2" :price="'250'"></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>{{name}}</h1> {{price}}, {{productCategory}}</div>',
+            props:{
+                'name':{}, 
+                'price':{type:Number},
+                'productCategory':{required:true}    //كخاصية مطلوبة productCategory وضعنا ال 
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+            }
+        });
+</script> -->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <product name="product 1" :price="100" product-category="cat 1"></product>
+        <product name="product 2" :price="250"></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>{{name}}</h1> {{price}}, {{productCategory}}</div>',
+            props:{
+                'name':{}, 
+                'price':{type:Number},
+                'productCategory':{required:true}    //كخاصية مطلوبة productCategory وضعنا ال 
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+            }
+        });
+</script> -->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <product name="product 1" :price="100" product-category="cat 1"></product>
+        <product name="product 2" :price="250" product-category="cat 2"></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>{{name}}</h1> {{price}}, {{productCategory}}</div>',
+            props:{
+                'name':{}, 
+                'price':{type:Number},
+                'productCategory':{required:true}    //كخاصية مطلوبة productCategory وضعنا ال 
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+            }
+        });
+</script> -->
+
+
+<!--في حال أردت وضع قيمة افتراضية -->
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <product name="product 1" :price="100" product-category="cat 1"></product>
+        <product name="product 2"  product-category="cat 2"></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>{{name}}</h1> {{price}}, {{productCategory}}</div>',
+            props:{
+                'name':{}, 
+                'price':{type:Number,default:0},
+                'productCategory':{required:true}    //كخاصية مطلوبة productCategory وضعنا ال 
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+            }
+        });
+</script> -->
+
+
+<!--للتحقق من السعر fun قمت بعمل-->
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <product name="product 1" :price="100" product-category="cat 1"></product>
+        <product name="product 2"  product-category="cat 2"></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>{{name}}</h1> {{price}}, {{productCategory}}</div>',
+            props:{
+                'name':{}, 
+                'price':{type:Number,default:0,function(value){
+                    return value>= 0;
+                }},
+                'productCategory':{required:true}    //كخاصية مطلوبة productCategory وضعنا ال 
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+            }
+        });
+</script> -->
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <product name="product 1" :price="-100" product-category="cat 1"></product>
+        <product name="product 2"  product-category="cat 2"></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>{{name}}</h1> {{price}}, {{productCategory}}</div>',
+            props:{
+                'name':{}, 
+                'price':{type:Number,default:0,validator:function(value){
+                    return value>= 0;
+                }},
+                'productCategory':{required:true}    //كخاصية مطلوبة productCategory وضعنا ال 
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+            }
+        });
+</script> -->
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <product name="product 1" :price="'100'" product-category="cat 1"></product>
+        <product name="product 2"  product-category="cat 2"></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>{{name}}</h1> {{price}}, {{productCategory}}</div>',
+            props:{
+                'name':{}, 
+                'price':{type:[Number,String],default:0,validator:function(value){
+                    return value>= 0;
+                }},
+                'productCategory':{required:true}    //كخاصية مطلوبة productCategory وضعنا ال 
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+            }
+        });
+</script>
+
