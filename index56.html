@@ -1,0 +1,47 @@
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+        {{changeTimes}} <br>
+        <button-counter v-on:click.native="clicked()" v-on:increament="count" :value="3"></button-counter>
+        <button-counter v-on:increament="count"></button-counter>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('button-counter', {
+            template: '<button @click="increament()">{{counter}}</button>',
+            data: function(){
+                return {
+                    counter: this.value
+                }
+            },
+            props:{
+                value: {
+                    default:0
+                }
+            },
+            methods:{
+                increament:function(){
+                    this.counter ++;
+                    this.$emit('increament');
+                }
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            data: {
+                changeTimes:0
+            },
+            methods: {
+                count: function(){
+                    this.changeTimes ++;
+                },
+                clicked: function(){
+                    alert('clicked Web');
+                }
+            }
+        });
+    </script>
