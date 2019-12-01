@@ -1,0 +1,123 @@
+
+    <!--هذا المثال كان في الدرس الماضي-->
+    <!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+        <product :product-data="product" ></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>#{{productData.id}} {{productData.name}} </h1> </div>',
+            props:{
+                'productData':{},
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+                product:{
+                    name:'product 1', //product هذا الابجكت الموجود هنا يُمثل ال
+                    id: 1
+                }
+
+            }
+        });
+    </script>
+-->
+
+
+
+<!--user في هذا الدرس سننشئ كومبوننت آخر باسم  -->
+
+<!-- <script type="text/javascript" src="https://unpkg.com/vue"></script>
+
+<div id="app">
+	<product :product-data="product"></product>
+	<hr>
+	<user :user-data="user"></user>
+</div>
+
+<script type="text/javascript">
+	Vue.component('product',{
+		'template': '<div><h1>#{{productData.id}} {{productData.name}}</h1> </div>',
+		props:{
+			'productData':{},
+		}
+	});
+
+	Vue.component('user',{
+		'template': '<div><img :src="userData.image"><h3>{{userData.name}}</h3></div>',
+		props:{
+			'userData':{},
+		}
+	});
+
+	new Vue({
+		'el':'#app',
+		'data': {
+			product:{
+				id: 1,
+				name: 'Product 1', //product هذا الابجكت الموجود هنا يُمثل ال
+			},
+			user:{                      //user لتعريف ال
+				name: 'Bashir',
+				image: 'https://1.gravatar.com/avatar/1'
+			}
+		}
+	});
+</script> -->
+
+
+
+
+
+
+<!--product وهو  componentداخل ال  user للإدخال ال -->
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+
+<div id="app">
+	<product :product-data="product"></product>
+	<hr>
+	<user :user-data="user"></user>
+</div>
+
+<script type="text/javascript">
+	Vue.component('product',{
+		'template': '<div><h1>#{{productData.id}} {{productData.name}}</h1> ' +
+		'<user :user-data="productData.user"></user> </div>',
+		props:{
+			'productData':{},
+		}
+	});
+
+	Vue.component('user',{
+		'template': '<div><img :src="userData.image"><h3>{{userData.name}}</h3></div>',
+		props:{
+			'userData':{},
+		}
+	});
+
+	new Vue({
+		'el':'#app',
+		'data': {
+			product:{
+				id: 1,
+				name: 'Product 1',
+				user:{
+					name: 'Bashir',
+					image: 'https://1.gravatar.com/avatar/1'
+				}
+			},
+			user:{
+				name: 'Bashir',
+				image: 'https://1.gravatar.com/avatar/1'
+			}
+		}
+	});
+</script>
+
+
+    <!--في المثال السابق استخدمنا الكومبوننت في أكثر من مكان-->
