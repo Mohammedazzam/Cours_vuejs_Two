@@ -1,0 +1,95 @@
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <my-component :val="userCount"></my-component>
+    </div>
+    
+    <script type="text/javascript">
+    Vue.component('my-component',{
+        'template':'<button @click="clicked()">Click me!</button>',
+        'props':['val'],
+        'methods':{
+            clicked:function(){
+                console.log('mohammed')
+            }
+        }
+    });
+        
+        new Vue({
+            'el':'#app',
+            data: {
+                userCount:5
+            },
+        })
+
+    </script> -->
+
+ 
+
+
+<!--تم تغييرها userCount سنتبه الأب بأن قيمة ال  event هنا سأقوم بإنشاء-->
+<!--وعند الأب root عند الدعس على الزر سيزود القيمة عن ال -->
+<!-- <script type="text/javascript" src="https://unpkg.com/vue"></script>
+
+<div id="app">
+
+  App Val: {{usersCount}}
+  <br/><br/>
+    <my-component v-on:updateval="updateUsersCount" :val="usersCount"></my-component>
+</div>
+
+<script type="text/javascript">
+    Vue.component('my-component', {
+        'template': '<div><button @click="clicked()">Click me!</button> Component Val: {{val}}</div>',
+        'props': ['val'],
+        'methods':{
+            clicked: function () {
+                this.$emit('updateval', this.val + 1); //event لهذا الemitوقمت  هيك بعمل updateVal الخاص بنا event  هنا سأقوم بكتابة اسم ال
+            }
+        }
+    });
+
+    new Vue({
+        'el':'#app',
+        data: {
+            usersCount: 5
+        },
+        methods: {
+            updateUsersCount: function(newVal){
+                this.usersCount = newVal;
+            }
+        }
+    });
+</script> -->
+
+
+
+
+    <!--الصيغة المختصرة للسابق-->
+    
+    <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+            <my-component :val.sync="usersCount"></my-component>
+        </div>
+        
+        <script type="text/javascript">
+            Vue.component('my-component', {
+                'template': '<button @click="clicked()">Click me!</button>',
+                'props': ['val'],
+                'methods':{
+                    clicked: function () {
+                        this.$emit('update:val', this.val + 1);
+                    }
+                }
+            });
+        
+            new Vue({
+                'el':'#app',
+                data: {
+                    usersCount: 5
+                }
+            });
+        </script>
+       
