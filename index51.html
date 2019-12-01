@@ -1,0 +1,227 @@
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+        <product :product-data="product" ></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>{{productData.name}}</h1> </div>',
+            props:{
+                'productData':{},
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+                product:{
+                    name:'product 1', 
+                    id: 1
+                }
+
+            }
+        });
+    </script> -->
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+        <product :name="product.name" ></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>{{name}}</h1> </div>',
+            props:{
+                'name':{},
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+                product:{
+                    name:'product 1', 
+                    id: 1
+                }
+
+            }
+        });
+    </script> -->
+
+    <!-- <script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+            <product :product-data="product" ></product>
+        </div>
+        
+        <script type="text/javascript">
+            Vue.component('product',{
+                'template': '<div><h1>{{productData.name}}</h1> </div>',
+                props:{
+                    'productData':{},
+                }
+            });
+        
+            new Vue({
+                'el':'#app',
+                'data': {
+                    product:{
+                        name:'product 1', //product هذا الابجكت الموجود هنا يُمثل ال
+                    }
+    
+                }
+            });
+        </script> -->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+        <product :product-data="product" ></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>{{productData.name}}</h1> </div>',
+            props:{
+                'productData':{},
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+                product:{
+                    name:'product 1', //product هذا الابجكت الموجود هنا يُمثل ال
+                    id: 1
+                }
+
+            }
+        });
+    </script> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+        <product :product-data="product" ></product>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>#{{productData.id}} {{productData.name}} </h1> </div>',
+            props:{
+                'productData':{},
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+                product:{
+                    name:'product 1', //product هذا الابجكت الموجود هنا يُمثل ال
+                    id: 1
+                }
+
+            }
+        });
+    </script> -->
+
+
+
+<!--product لتمرير أكثر من -->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+        <product :product-data="product" ></product>
+        <product :product-data="product2" ></product>
+
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>#{{productData.id}} {{productData.name}} </h1> </div>',
+            props:{
+                'productData':{},
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+                product:{
+                    name:'product 1', 
+                    id: 1
+                },
+
+                product2:{
+                    name:'product 2', 
+                    id: 2
+                }
+            }
+        });
+    </script> -->
+
+
+
+
+
+
+
+
+
+<!--component لعمل لوب لتمرير كل عنصر من عناصر المصفوفة لهذا ال-->
+
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+        <product :product-data="product" ></product>
+        <product :product-data="product2" ></product>
+        <product v-for='item in products' :product-data="item" ></product>
+
+
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('product',{
+            'template': '<div><h1>#{{productData.id}} {{productData.name}} </h1> </div>',
+            props:{
+                'productData':{},
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data': {
+                product:{
+                    name:'product 1', 
+                    id: 1
+                },
+                product2:{
+                    name:'product 2', 
+                    id: 2
+                },
+                
+
+
+                products:[      //عبارة عن مصفوفة تحتوي  عدد من العناصر
+                 {
+                    name:'product 3', 
+                    id: 3
+                 },
+                 {
+                    name:'product 4', 
+                    id: 4
+                 },
+                ]
+            }
+
+        });
+    </script>
