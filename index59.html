@@ -1,0 +1,303 @@
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    
+    <my-component>
+    </my-component>
+
+    <my-component>
+        tets slot mm
+    </my-component>
+    
+
+    </div>
+    
+    <script type="text/javascript">
+
+        Vue.component('my-component',{
+
+            'template':'<div>' + 
+
+            '</div>'
+        })
+
+        new Vue({
+            'el':'#app',
+          
+        })
+
+    </script>
+-->
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    
+    <my-component>
+    </my-component>
+
+    <my-component>
+        tets slot mm
+    </my-component>
+    
+
+    </div>
+    
+    <script type="text/javascript">
+
+        Vue.component('my-component',{
+            'template':`<div>
+            test
+            test2
+            </div>`
+        })
+
+        new Vue({
+            'el':'#app',
+          
+        })
+
+    </script>
+-->
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    
+    <my-component>
+    </my-component>
+    
+
+    </div>
+    
+    <script type="text/javascript">
+
+        Vue.component('my-component',{
+            'template':`<div>
+                <header></header>
+                <main> <slot>Main Default Content </slot> </main>
+                <footer></footer>
+            </div>`
+        })
+
+        new Vue({
+            'el':'#app',
+          
+        })
+
+    </script>
+-->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <my-component>Main</my-component>
+    </div>
+    
+    <script type="text/javascript">
+    Vue.component('my-component',{
+        'template':`<div>
+            <header></header>
+            <main><slot> Main Default Content</slot></main>
+            <footer></footer>
+            </div>
+            `
+    })
+        new Vue({
+            'el':'#app',
+          
+        })
+
+    </script> -->
+
+
+    
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    
+    <my-component>
+        Main
+    </my-component>
+    
+
+    </div>
+    
+    <script type="text/javascript">
+
+        Vue.component('my-component',{
+            'template':`<div>
+
+                <header> <slot name= "header"> Header Default Content   </slot></header>
+
+                <main><slot>Main Default content </solt> </main>
+
+                <footer></footer>
+            </div>`
+        })
+
+        new Vue({
+            'el':'#app',
+          
+        })
+
+    </script> -->
+
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    
+    <my-component>
+        <div slot="header">Custom Header</div>
+        Main
+    </my-component>
+    
+
+    </div>
+    
+    <script type="text/javascript">
+
+        Vue.component('my-component',{
+            'template':`<div>
+
+                <header> <slot name= "header"> Header Default Content   </slot></header>
+
+                <main><slot>Main Default content </solt> </main>
+
+                <footer></footer>
+            </div>`
+        })
+
+        new Vue({
+            'el':'#app',
+          
+        })
+
+    </script>
+-->
+
+
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    
+    <my-component>
+        <div slot="header">Custom Header</div>
+        Main
+    </my-component>
+    
+
+    </div>
+    
+    <script type="text/javascript">
+
+        Vue.component('my-component',{
+            'template':`<div>
+
+                <header> <slot name= "header"> Header Default Content   </slot></header>
+
+                <main><slot>Main Default content </solt> </main>
+
+                <footer><slot name="footer">Footer Default content </solt></footer>
+            </div>`
+        })
+
+        new Vue({
+            'el':'#app',
+          
+        })
+
+    </script>
+-->
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    
+    <my-component>
+        <div slot="header">Custom Header</div>
+        Main
+
+        <div slot="footer">Custom Footer</div>
+    </my-component>
+    
+
+    </div>
+    
+    <script type="text/javascript">
+
+        Vue.component('my-component',{
+            'template':`<div>
+
+                <header> <slot name= "header"> Header Default Content   </slot></header>
+
+                <main><slot>Main Default content </solt> </main>
+
+                <footer><slot name="footer">Footer Default content </solt></footer>
+            </div>`
+        })
+
+        new Vue({
+            'el':'#app',
+          
+        })
+
+    </script>
+-->
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    
+    <my-component>
+        <div slot="header">
+        <h1>
+            Custom Header
+        </h1>
+    </div>
+        Main
+
+        <div slot="footer">Custom Footer</div>
+    </my-component>
+    
+
+    </div>
+    
+    <script type="text/javascript">
+
+        Vue.component('my-component',{
+            'template':`<div>
+
+                <header> <slot name= "header"> Header Default Content   </slot></header>
+
+                <main><slot>Main Default content </solt> </main>
+
+                <footer><slot name="footer">Footer Default content </solt></footer>
+            </div>`
+        })
+
+        new Vue({
+            'el':'#app',
+          
+        })
+
+    </script>
