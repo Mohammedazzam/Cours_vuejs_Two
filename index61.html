@@ -1,0 +1,85 @@
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <button @click="activeComp = 'first-component'">first</button>
+    <button @click="activeComp = 'second-component'">second</button>
+    <component :is="activeComp"></component>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('first-component',{
+            'template':`<div>   
+            First component 1 
+            <button @click= "counter++"> Increase <button>  
+            <div>{{counter}}</div>
+            </div>`,
+            'data':function(){
+                return{
+                'counter':0
+            }
+            }
+        });
+        
+        Vue.component('second-component',{
+            'template':'<div>   Second component 2 </div>'
+        })
+
+        new Vue({
+            'el':'#app',
+            data:{
+                'activeComp':'first-component'
+            }
+          
+        });
+
+    </script>
+-->
+
+
+
+
+
+
+
+<!--component وبحطها حول ال keep-aliveفي الذاكرة ولا يتم إعادة انشائه من جديد سنستخدم تاج باسم component لكي يبقى ال -->
+
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <button @click="activeComp = 'first-component'">first</button>
+    <button @click="activeComp = 'second-component'">second</button>
+
+    <keep-alive>
+    <component :is="activeComp"></component>
+   </keep-alive>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('first-component',{
+            'template':`<div>   
+            First component 1 
+            <button @click= "counter++"> Increase <button>  
+            <div>{{counter}}</div>
+            </div>`,
+            'data':function(){
+                return{
+                'counter':0
+            }
+            }
+        });
+        
+        Vue.component('second-component',{
+            'template':'<div>   Second component 2 </div>'
+        })
+
+        new Vue({
+            'el':'#app',
+            data:{
+                'activeComp':'first-component'
+            }
+          
+        });
+
+    </script>
