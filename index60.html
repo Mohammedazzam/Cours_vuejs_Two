@@ -1,0 +1,109 @@
+
+
+<!-- First component سيطبع -->
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+        <component is="first-component"></component>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('first-component',{
+            'template':'<div>   First component 1 </div>'
+        })
+        
+        Vue.component('second-component',{
+            'template':'<div>   Sirst component 2 </div>'
+        })
+
+        new Vue({
+            'el':'#app',
+          
+        });
+
+    </script>
+-->
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+        <component is="second-component"></component>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('first-component',{
+            'template':'<div>   First component 1 </div>'
+        })
+        
+        Vue.component('second-component',{
+            'template':'<div>   Sirst component 2 </div>'
+        })
+
+        new Vue({
+            'el':'#app',
+          
+        });
+
+    </script>
+-->
+
+
+<!--بشكل ديناميكي component لتغيير ال-->
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <button @click="activeComp = 'first-component'">first</button>
+    <button @click="activeComp = 'second-component'">second</button>
+    <component :is="activeComp"></component>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('first-component',{
+            'template':'<div>   First component 1 </div>'
+        })
+        
+        Vue.component('second-component',{
+            'template':'<div>   Second component 2 </div>'
+        })
+
+        new Vue({
+            'el':'#app',
+            data:{
+                'activeComp':'first-component'
+            }
+          
+        });
+
+    </script> -->
+
+
+
+    <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+        <button @click= "activeComp = 'first-component'" >first</button>
+        <button @click= "activeComp = 'second-component'" >second</button>
+        <component :is="activeComp"></component>
+    </div>
+    
+    <script type="text/javascript">
+        Vue.component('first-component',{
+            'template':'<div>   First component 1 </div>'
+        })
+        
+        Vue.component('second-component',{
+            'template':'<div>   Second component 2 </div>'
+        })
+
+        new Vue({
+            'el':'#app',
+            data:{
+                'activeComp':'first-component'
+            }
+          
+        });
+
+    </script>
