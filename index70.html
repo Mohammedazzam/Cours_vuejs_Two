@@ -1,0 +1,103 @@
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <input type="text" v-model="name">
+        <textarea v-model="name"></textarea>
+
+        <br><br>
+
+        <label for="one">radio one</label>
+        <input type="radio" id="one" value="one" v-model="radioValue">
+
+        <br>
+
+        <label for="tow">radio tow</label>
+        <input type="radio" id="tow" value="tow" v-model="radioValue">
+
+        <br><br>
+
+        <label for="radio_tow">second radio</label>
+        <input type="radio" id="radio_tow"  value="tow" v-model="radioTow">
+
+        <br><br>
+
+        <label for="checkbox_one">Checkbox one</label>
+        <input type="checkbox" id="checkbox_one"  v-model="checkbox_one">
+
+    </div>
+    
+    <script type="text/javascript">
+          
+
+        new Vue({
+            'el':'#app',
+            'data': {
+                    name:'test',
+                    radioValue:"tow",
+                    radioTow:"",
+                    checkbox_one:false          //false افتراضياً ستكون القيمة 
+                }
+        });
+    </script>
+-->
+
+<!--checkbox الشكل الآخر لاستخدام ال-->
+<script type="text/javascript" src="vue.js"> </script>
+
+    <div id="app">
+        <input type="text" v-model="name">
+        <textarea v-model="name"></textarea>
+
+        <br><br>
+
+        <label for="one">radio one</label>
+        <input type="radio" id="one" value="one" v-model="radioValue">
+
+        <br>
+
+        <label for="tow">radio tow</label>
+        <input type="radio" id="tow" value="tow" v-model="radioValue">
+
+        <br><br>
+
+        <label for="radio_tow">second radio</label>
+        <input type="radio" id="radio_tow"  value="tow" v-model="radioTow">
+
+        <br><br>
+
+        <label for="checkbox_one">Checkbox one</label>
+        <input type="checkbox" id="checkbox_one"  v-model="checkbox_one">
+
+
+
+        <br><br>
+
+        <label for="checkbox_tow_one">Checkbox one</label>
+        <input type="checkbox" id="checkbox_tow_one" value="one"  v-model="checkbox_tow">
+
+
+        <br>
+
+        <label for="checkbox_tow_tow">Checkbox one</label>
+        <input type="checkbox" id="checkbox_tow_tow" value="tow"  v-model="checkbox_tow">
+
+    </div>
+    
+    <script type="text/javascript">
+          
+
+        new Vue({
+            'el':'#app',
+            'data': {
+                    name:'test',
+                    radioValue:"tow",
+                    radioTow:"",
+                    checkbox_one:false,          //false افتراضياً ستكون القيمة 
+                    checkbox_tow:["one","tow"],     //وسيتم تحديد كلا الانبوتين valueبحط هان ال
+
+                }
+        });
+    </script>
