@@ -1,0 +1,187 @@
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+	<input type="text" v-model="val" @change="valChanged">
+	
+
+</div>
+
+<script type="text/javascript">
+	new Vue({
+		'el':'#app',
+		'data': {
+			'val': 'test',
+		},
+		'methods': {
+			valChanged: function(){
+				console.log('valChanged');
+		
+			},
+
+		}
+	});
+</script> -->
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+	<input type="text" v-model="val" @input="valInput" @change="valChanged">
+	
+
+</div>
+
+<script type="text/javascript">
+	new Vue({
+		'el':'#app',
+		'data': {
+			'val': 'test',
+		},
+		'methods': {
+			valChanged: function(){
+				console.log('valChanged');
+		
+			},
+			valInput:function(){
+				console.log('valInput')
+			}
+
+		}
+	});
+</script> -->
+
+
+
+
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+ 
+    <input type="text" v-model="val" @input="valInput"  @change="valChanged">
+    
+    <select v-model='selectVal' @change='selectValChanged'>
+        <option value="1">One</option>
+        <option value="2">Tow</option>
+    </select>
+	
+</div>
+
+<script type="text/javascript">
+	new Vue({
+		'el':'#app',
+		'data': {
+			'val': 'test',
+            'selectVal':""
+		},
+		'methods': {
+			valChanged: function(){
+				console.log('valChanged');
+		
+			},
+            valInput:function(){
+                console.log('valInput');
+
+            },
+            selectValChanged:function(){
+                console.log('selectValChanged')
+            }
+		}
+	});
+</script>
+-->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+    <form>
+ 
+    <input type="text" v-model="val" @input="valInput"  @change="valChanged">
+    
+    <select v-model='selectVal' @change='selectValChanged'>
+        <option value="1">One</option>
+        <option value="2">Tow</option>
+    </select>
+
+        <button type="submit">Go</button>
+
+    </form>
+</div>
+
+<script type="text/javascript">
+	new Vue({
+		'el':'#app',
+		'data': {
+			'val': 'test',
+            'selectVal':""
+		},
+		'methods': {
+			valChanged: function(){
+				console.log('valChanged');
+		
+			},
+            valInput:function(){
+                console.log('valInput');
+
+            },
+            selectValChanged:function(){
+                console.log('selectValChanged')
+            },
+
+		}
+	});
+</script> -->
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+    <form @submit.prevent="saveform">
+ 
+    <input type="text" v-model="val" @input="valInput"  @change="valChanged">
+    
+    <select v-model='selectVal' @change='selectValChanged'>
+        <option value="1">One</option>
+        <option value="2">Tow</option>
+    </select>
+
+        <button type="submit">Go</button>
+
+    </form>
+</div>
+
+<script type="text/javascript">
+	new Vue({
+		'el':'#app',
+		'data': {
+			'val': 'test',
+            'selectVal':""
+		},
+		'methods': {
+			valChanged: function(){
+				console.log('valChanged');
+		
+			},
+            valInput:function(){
+                console.log('valInput');
+
+            },
+            selectValChanged:function(){
+                console.log('selectValChanged')
+            },
+            saveform:function(){
+                console.log('form Saved')
+            }
+		}
+	});
+</script>
