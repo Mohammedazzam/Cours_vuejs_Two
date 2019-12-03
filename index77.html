@@ -1,0 +1,283 @@
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
+<div id="app">
+
+</div>
+
+<script type="text/javascript">
+	
+	new Vue({
+		'el':'#app',
+
+	});
+</script>
+-->
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
+
+<div id="app">
+    Hello
+    <button @click="getPosts">Get Post</button>
+</div>
+
+<script type="text/javascript">
+	
+	new Vue({
+		'el':'#app',
+        'data':{
+            'posts':[]
+        },
+        'methods':{
+            'getPosts':function(){
+                 // GET /someUrl
+                this.$http.get('https://jsonplaceholder.typicode.com/posts').then(response => {
+
+                // get body data
+                this.someData = response.body;
+
+                }, response => {
+                // error callback
+                });
+                                }
+                    }
+                        
+
+        	});
+</script>
+-->
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
+
+<div id="app">
+        <button @click="getPosts">Get Posts</button>
+    
+        <select>
+            <option v-for="post in posts" :value="post.id">{{post.title}}</option>
+        </select>
+    </div>
+    
+    <script type="text/javascript">
+        new Vue({
+            'el':'#app',
+            'data':{
+                'posts': []
+            },
+            'methods': {
+                'getPosts': function(){
+                  // GET /someUrl
+                  this.$http.get('https://jsonplaceholder.typicode.com/posts').then(response => {
+    
+                    // get body data
+                    this.posts = response.body;
+    
+                  }, response => {
+                    // error callback
+                  });
+                                        }
+                         }
+                
+        });
+    </script>
+-->
+
+<!--هذه الطريقة لجلب الداتا عند دعس الزر-->
+<!-- <script type="text/javascript" src="vue.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
+
+<div id="app">
+        Hello
+
+        <button @click="getPosts">Get Post</button>
+    </div>
+    
+    <script type="text/javascript">
+        new Vue({
+            'el':'#app',
+            'data':{
+                'posts': []
+            },
+            'methods': {
+                'getPosts': function(){
+                  // GET /someUrl
+                  this.$http.get('https://jsonplaceholder.typicode.com/posts').then(response => {
+    
+                    // get body data
+                    this.posts = response.body;
+    
+                  }, response => {
+                    // error callback
+                  });
+                                        }
+                         }
+                
+        });
+    </script> -->
+
+<!--طريقة جلب الداتا عند تحميل الصفحة بشكل مباشر-->
+<!-- <script type="text/javascript" src="vue.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+    
+    
+    <div id="app">
+            <button @click="getPosts">Get Post</button>
+             
+            <select>
+                <option v-for="post in posts" :value="post.id">{{post.title}}</option>
+            </select>
+
+        </div>
+        
+        <script type="text/javascript">
+            new Vue({
+                'el':'#app',
+                'data':{
+                    'posts': []
+                },
+                'methods': {
+                    'getPosts': function(){
+                      // GET /someUrl
+                      this.$http.get('https://jsonplaceholder.typicode.com/posts').then(response => {
+        
+                        // get body data
+                        this.posts = response.body;
+        
+                      }, response => {
+                        // error callback
+                      });
+                                            }
+                             }
+                    
+            });
+        </script> -->
+
+
+<!--created بستخدم دالة ال lifeCycle Hook لجلب الداتا عند بداية الصفحة بستخدم -->        
+<!-- <script type="text/javascript" src="vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
+<div id="app">
+  <button @click="getPosts">Get Post</button>
+
+  <select>
+    <option v-for="post in posts" :value="post.id">{{post.title}}</option>
+  </select>
+</div>
+
+<script type="text/javascript">
+  new Vue({
+    el: "#app",
+    data: {
+      posts: []
+    },
+    methods: {
+      getPosts: function() {
+        // GET /someUrl
+        this.$http.get("https://jsonplaceholder.typicode.com/posts").then(
+          response => {
+            // get body data
+            this.posts = response.body;
+          },
+          response => {
+            // error callback
+          }
+        );
+      }
+    },
+    'created':function(){
+        this.getPosts();
+    }
+  });
+</script> -->
+
+
+
+
+<script type="text/javascript" src="vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
+<div id="app">
+  <button @click="getPosts">Get Post</button>
+
+  <select>
+    <option v-for="post in posts" :value="post.id">{{post.title}}</option>
+  </select>
+</div>
+
+<script type="text/javascript">
+  new Vue({
+    el: "#app",
+    data: {
+      posts: []
+    },
+    methods: {
+      getPosts: function() {
+        // GET /someUrl
+        this.$http.get("https://jsonplaceholder.typicode.com/posts").then(
+          response => {
+            // get body data
+            this.posts = response.body;
+          },
+          response => {
+            // error callback
+          }
+        );
+      }
+    },
+    'beforeCreate':function(){
+        this.getPosts();
+    }
+  });
+</script>
+
+
+
+
+
+<!---
+<script type="text/javascript" src="vue.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+
+
+<div id="app">
+        <button @click="getPosts">Get Posts</button>
+    
+        <select>
+            <option v-for="post in posts" :value="post.id">{{post.title}}</option>
+        </select>
+    </div>
+    
+    <script type="text/javascript">
+        new Vue({
+            'el':'#app',
+            'data':{
+                'posts': []
+            },
+            'methods': {
+                'getPosts': function(){
+                  // GET /someUrl
+                  this.$http.get('https://jsonplaceholder.typicode.com/posts').then(response => {
+    
+                    // get body data
+                    this.posts = response.body;
+    
+                  }, response => {
+                    // error callback
+                  });
+                                        }
+                         },
+                'created': function(){
+			        this.getPosts();
+		                             }
+                
+        });
+    </script>
+-->
