@@ -1,0 +1,135 @@
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    {{name}}
+</div>
+
+<script type="text/javascript">
+	
+	new Vue({
+		'el':'#app',
+        'data':{
+            'name':'Mohammed'
+        }
+
+	});
+</script> -->
+
+
+
+<!--سيطبعها حروف كبيرة-->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    {{name.toUpperCase()}}
+</div>
+
+<script type="text/javascript">
+	
+	new Vue({
+		'el':'#app',
+        'data':{
+            'name':'Mohammed'
+        }
+
+	});
+</script> -->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    {{name.toUpperCase()}} <br>
+    {{name | toUpperCase}}
+</div>
+
+<script type="text/javascript">
+	
+	new Vue({
+		'el':'#app',
+        'data':{
+            'name':'Mohammed'
+        },
+
+        'filters':{
+            'toUpperCase':function(value){
+                return value.toUpperCase()
+            }
+        }
+
+	});
+</script> -->
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    {{name.toUpperCase()}} <br>
+    {{name | toUpperCase}} <br>
+    {{name | toUpperCase |dupplicate}}
+</div>
+
+<script type="text/javascript">
+	
+	new Vue({
+		'el':'#app',
+        'data':{
+            'name':'Mohammed'
+        },
+
+        'filters':{
+            'toUpperCase':function(value){
+                return value.toUpperCase()
+            },
+
+            'dupplicate':function(value){
+                return value + ' ' + value;
+            }
+        }
+
+	});
+</script> -->
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+        {{name.toUpperCase()}}
+        <br />
+        <br />
+        {{name | toUpperCase | dupplicate}}
+        <br />
+        <br />
+        {{email | toLowerCase }}
+    
+    </div>
+    
+    <script type="text/javascript">
+    
+        Vue.filter('toLowerCase', function(value){
+            return value.toLowerCase();
+        });
+    
+        new Vue({
+            'el':'#app',
+            'data':{
+                'name': 'Mohammed',
+                'email': 'mohammed.mojahed93@gmail.com'
+            },
+            'filters': {
+                'toUpperCase': function (value) {
+                    return value.toUpperCase();
+                },
+                'dupplicate': function (value) {
+                    return value + ' ' + value;
+                }
+            }
+        });
+    </script>
+    
