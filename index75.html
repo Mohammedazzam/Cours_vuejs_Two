@@ -1,0 +1,198 @@
+
+    <!--لعرض التاريخ-->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+        <date-picker></date-picker>
+</div>
+
+<script type="text/javascript">
+    Vue.component('datePicker',{
+        'template':`
+        <div>
+            <Select>
+                <option>2018</option>
+                <option>2017</option>
+                <option>2016</option>
+            </Select>
+            <Select>
+                <option>12</option>
+                <option>11</option>
+                <option>10</option>
+            </Select>
+            <Select>
+                <option>03</option>
+                <option>02</option>
+                <option>01</option>
+            </Select>
+        </div>
+        `,
+    'props':['value']
+    }),
+
+	new Vue({
+		'el':'#app',
+		'data': {
+		},
+	});
+</script> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+        <date-picker v-model="oldDate"></date-picker>
+</div>
+
+<script type="text/javascript">
+    Vue.component('datePicker',{
+        'template':`
+        <div>
+            <Select>
+                <option>2018</option>
+                <option>2017</option>
+                <option>2016</option>
+            </Select>
+            <Select>
+                <option>12</option>
+                <option>11</option>
+                <option>10</option>
+            </Select>
+            <Select>
+                <option>03</option>
+                <option>02</option>
+                <option>01</option>
+            </Select>
+        </div>
+        `,
+    'props':['value'],
+    }),
+
+	new Vue({
+		'el':'#app',
+		'data': {
+            oldDate:'2017/07/02'
+		},
+	});
+</script> -->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+
+        <date-picker v-model="oldDate"></date-picker>
+</div>
+
+<script type="text/javascript">
+    Vue.component('datePicker',{
+        'template':`
+        <div>
+                <select v-model="date.y">
+				<option>2018</option>
+				<option>2017</option>
+				<option>2016</option>
+			</select>
+			<select v-model="date.m">
+				<option>12</option>
+				<option>11</option>
+				<option>10</option>
+			</select>
+			<select v-model="date.d">
+				<option>03</option>
+				<option>02</option>
+				<option>01</option>
+			</select>
+			</div>
+		`,
+    'props':['value'],
+    'computed':
+        {
+            'date':function(){
+                var data = this.value.split('/');
+                return{
+                    'y':data[0],
+                    'm':data[1],
+                    'd':data[2],
+
+                }
+            }
+        }    }),
+
+	new Vue({
+		'el':'#app',
+		'data': {
+            oldDate:'2017/11/02'
+		},
+	});
+</script> -->
+
+
+
+
+
+
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+
+<div id="app">
+	<date-picker v-model="oldDate"></date-picker>
+  <br>
+  {{oldDate}}
+</div>
+
+<script type="text/javascript">
+
+	Vue.component('datePicker' ,{
+		'template': `
+			<div>
+			<select v-model="date.y" @change="updateValue">
+				<option>2018</option>
+				<option>2017</option>
+				<option>2016</option>
+			</select>
+			<select v-model="date.m" @change="updateValue">
+				<option>12</option>
+				<option>11</option>
+				<option>10</option>
+			</select>
+			<select v-model="date.d" @change="updateValue">
+				<option>03</option>
+				<option>02</option>
+				<option>01</option>
+			</select>
+			</div>
+		`,
+		'props': ['value'],
+		'computed': {
+			'date': function(){
+				var data = this.value.split('/');
+
+				return {
+					'y': data[0],
+					'm': data[1],
+					'd': data[2]
+				}
+			}
+		},
+		'methods': {
+			updateValue: function(){
+				var newDate = this.date.y + '/' + this.date.m + '/' + this.date.d;
+				this.$emit('input', newDate);
+			}
+		}
+	});
+
+	new Vue({
+		'el':'#app',
+		'data': {
+			oldDate: '2017/11/02'
+		},
+	});
+</script>
+
