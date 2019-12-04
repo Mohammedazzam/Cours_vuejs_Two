@@ -1,0 +1,366 @@
+<!--بحجم كبير test سيطبع كلمة templateوعمل  component قمت بإنشاء -->
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <component1></component1>
+</div>
+
+<script type="text/javascript">
+    
+    Vue.component('component1', { //objectقمت هنا بكتابة 
+        data:function(){
+            return{
+                
+                    'name':'test'
+                };
+            },
+            'template':'<h1>{{name}}</h1>'
+        
+    }),
+
+	new Vue({
+		'el':'#app',
+        'data':{
+            
+                }
+	});
+</script>
+-->
+
+<!--  component 2قمت بعمل-->
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <component1></component1>
+    <component2></component2>
+</div>
+
+<script type="text/javascript">
+    
+    Vue.component('component1', { 
+        data:function(){
+            return{               
+                    'name':'test'
+                };
+            },
+            'template':'<h1>{{name}}</h1>'     
+    }),
+
+
+    Vue.component('component2', {  
+        data:function(){
+            return{
+                
+                    'name':'test2'
+                };
+            },
+            'template':'<h1>{{name}}</h1>'
+        
+    }),
+	new Vue({
+		'el':'#app',
+        'data':{
+            
+                }
+	});
+</script>
+-->
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <component1></component1>
+    <component2></component2>
+</div>
+
+<script type="text/javascript">
+    var mixin1={
+        'template':'<h1>{{name}}</h1>'     
+    }
+    
+    Vue.component('component1', { 
+        mixins:[mixin1],
+        data:function(){
+            return{               
+                    'name':'test'
+                };
+            },
+    }),
+
+
+    Vue.component('component2', {
+        mixins:[mixin1],  
+        data:function(){
+            return{
+                
+                    'name':'test2'
+                };
+            },        
+    }),
+	new Vue({
+		'el':'#app',
+        'data':{
+            
+                }
+	});
+</script>
+-->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"></script>
+
+<div id="app">
+  <component1></component1>
+  <component2></component2>
+</div>
+
+<script type="text/javascript">
+  var mixin1 = {
+    template: "<h1>{{name}}</h1>",
+    data: function() {
+      return {
+        date: Date.now()
+      };
+    }
+  };
+
+  Vue.component("component1", {
+    mixins: [mixin1],
+    data: function() {
+      return {
+        name: "test"
+      };
+    }
+  }),
+
+    Vue.component("component2", {
+      mixins: [mixin1],
+      data: function() {
+        return {
+          name: "test2"
+        };
+      }
+    }),
+    new Vue({
+      el: "#app",
+      data: {}
+    });
+</script> -->
+
+
+
+
+<!--
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <component1></component1>
+    <component2></component2>
+</div>
+
+<script type="text/javascript">
+    var mixin1={
+        'template':'<h1>{{name}}</h1>',  
+        data:function(){
+            return{
+                'description':'Mixin description',              
+                    'date':Date.now()
+                };
+            },   
+    }
+    Vue.component('component1', { 
+        mixins:[mixin1],
+        data:function(){
+            return{              
+                'name':'test',
+                'description':'component1 description',              
+                };
+            },
+    }),
+
+    Vue.component('component2', {
+        mixins:[mixin1],  
+        data:function(){
+            return{
+                    'name':'test2'
+                };
+            },        
+    }),
+	new Vue({
+		'el':'#app',
+        'data':{
+            
+                }
+	});
+</script>
+-->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <component1></component1>
+    <component2></component2>
+</div>
+
+<script type="text/javascript">
+    var mixin1={
+        'template':'<h1>{{name}} {{description}}</h1>',  
+        data:function(){
+            return{
+                'description':'Mixin description',              
+                    'date':Date.now()
+                };
+            },   
+    }
+    Vue.component('component1', { 
+        mixins:[mixin1],
+        data:function(){
+            return{              
+                'name':'test',
+                'description':'component1 description',              
+                };
+            },
+    }),
+
+    Vue.component('component2', {
+        mixins:[mixin1],  
+        data:function(){
+            return{
+                    'name':'test2'
+                };
+            },        
+    }),
+	new Vue({
+		'el':'#app',
+        'data':{
+            
+                }
+	});
+</script> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <component1></component1>
+    <component2></component2>
+</div>
+
+<script type="text/javascript">
+    var mixin1={
+        'template':'<h1>{{name}} {{description}}</h1>',  
+        data:function(){
+            return{
+                'description':'Mixin description',              
+                    'date':Date.now()
+                };
+            },   
+
+            created:function(){
+                console.log('Mixin Created Hook', this.description)
+            }
+    }
+    Vue.component('component1', { 
+        mixins:[mixin1],
+        data:function(){
+            return{              
+                'name':'test',
+                'description':'component1 description',              
+                };
+            },
+            created:function(){
+                console.log('component1 Created Hook',this.description)
+            }
+    }),
+
+    Vue.component('component2', {
+        mixins:[mixin1],  
+        data:function(){
+            return{
+                    'name':'test2',
+                    'description':'component2 description',              
+                };
+            },  
+            created:function(){
+                console.log('component2 Created Hook',this.description)
+            }      
+    }),
+	new Vue({
+		'el':'#app',
+        'data':{
+            
+                }
+	});
+</script> -->
+
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+
+<div id="app">
+    <component1></component1>
+    <component2></component2>
+</div>
+
+<script type="text/javascript">
+
+    Vue.mixin({
+        data:function(){
+            return{
+                'var1':'var1 value'
+            }
+        }
+    });
+
+    var mixin1={
+        'template':'<h1>{{name}} {{description}}</h1>',  
+        data:function(){
+            return{
+                'description':'Mixin description',              
+                    'date':Date.now()
+                };
+            },   
+
+            created:function(){
+                console.log('Mixin Created Hook', this.description)
+            }
+    }
+    Vue.component('component1', { 
+        mixins:[mixin1],
+        data:function(){
+            return{              
+                'name':'test',
+                'description':'component1 description',              
+                };
+            },
+            created:function(){
+                console.log('component1 Created Hook',this.description)
+            }
+    }),
+
+    Vue.component('component2', {
+        mixins:[mixin1],  
+        data:function(){
+            return{
+                    'name':'test2',
+                    'description':'component2 description',              
+                };
+            },  
+            created:function(){
+                console.log('component2 Created Hook',this.description)
+            }      
+    }),
+	new Vue({
+		'el':'#app',
+        'data':{
+            
+                }
+	});
+</script>
