@@ -1,0 +1,233 @@
+
+<!--  
+<script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+    <button v-on:click.stop="val = 1"></button>
+</div>
+
+<script type="text/javascript">
+   
+	new Vue({
+		'el':'#app',
+        'data':{
+            
+                }
+	        });
+</script> -->
+
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+
+    <div v-color>Test</div>
+
+</div>
+
+<script type="text/javascript">
+    Vue.directive('color',{
+        inserted(el){
+        console.log(el);
+    }   
+    })
+	new Vue({
+		'el':'#app',
+        
+	        });
+</script> -->
+
+
+
+<!--سيطبع لون أخضر-->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+
+    <div v-color>Test</div>
+
+</div>
+
+<script type="text/javascript">
+    Vue.directive('color',{
+        inserted(el){
+            el.style.color = 'green'
+    }   
+    })
+	new Vue({
+		'el':'#app',
+        
+	        });
+</script> -->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+
+    <div v-color>Test</div>
+    <p v-color>p Test</p>
+
+</div>
+
+<script type="text/javascript">
+    Vue.directive('color',{
+        inserted(el){
+            el.style.color = 'green'
+    }   
+    })
+	new Vue({
+		'el':'#app',
+        
+	        });
+</script> -->
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+
+    <div v-color="'green'">Test</div>
+    <p v-color="'red'">p Test</p>
+
+</div>
+
+<script type="text/javascript">
+    Vue.directive('color',{
+        inserted(el, binding){
+            el.style.color = binding.value;
+    }   
+    })
+	new Vue({
+		'el':'#app',
+        
+	        });
+</script> -->
+
+
+
+<!-- <script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+
+    <div v-color.border="'green'">Test</div>
+    <p v-color="'red'">p Test</p>
+
+</div>
+
+<script type="text/javascript">
+    Vue.directive('color',{
+        inserted(el, binding){
+            el.style.color = binding.value;
+
+            console.log(binding)
+    }   
+    })
+	new Vue({
+		'el':'#app',
+        
+	        });
+</script> -->
+
+
+
+
+<!-- 
+<script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+
+    <div v-color="'green'">Test</div>
+    <p v-color= "'red'">p Test</p>
+
+</div>
+
+<script type="text/javascript">
+Vue.directive('color', {
+		inserted(el, binding){
+			// Value
+				el.style.color = binding.value;
+		
+			// Modifiers
+			if(binding.modifiers.border){
+				el.style.borderColor = binding.value;
+				el.style.borderStyle = 'solid';
+        }
+    }   
+    })
+	new Vue({
+		'el':'#app',
+        
+	        });
+</script> -->
+
+
+
+<!---
+<script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+
+    <div v-color="'green'">Test</div>
+    <p v-color:bg= "'red'">p Test</p>
+
+</div>
+
+<script type="text/javascript">
+Vue.directive('color', {
+		inserted(el, binding){
+			// Value
+
+                if(binding.arg == 'bg'){
+                    el.style.backgroundColor = binding.value;
+                }else{
+                    el.style.color = binding.value;
+                }
+		
+			// Modifiers
+			if(binding.modifiers.border){
+				el.style.borderColor = binding.value;
+				el.style.borderStyle = 'solid';
+        }
+    }   
+    })
+	new Vue({
+		'el':'#app',
+        
+	        });
+</script>
+-->
+
+
+
+<script type="text/javascript" src="vue.js"> </script>
+<div id="app">
+        <button v-on:click.stop="val = 1"></button>
+       
+    
+        <div v-color.border="'green'">Div Test</div>
+        <p v-color:bg="'red'">P Test</p>
+        <p v-color:bg.border="'red'">P Test</p>
+    
+    </div>
+    
+    <script type="text/javascript">
+        Vue.directive('color', {
+            inserted(el, binding){
+                console.log(binding);
+                // Value
+                if(binding.arg == 'bg'){
+                    el.style.backgroundColor = binding.value;
+                } else {
+                    el.style.color = binding.value;
+                }
+    
+                // Modifiers
+                if(binding.modifiers.border){
+                    el.style.borderColor = binding.value;
+                    el.style.borderStyle = 'solid';
+                }
+    
+            }
+        });
+    
+        new Vue({
+            'el':'#app',
+        });
+    </script>
+
